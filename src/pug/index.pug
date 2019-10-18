@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+	head
+		include carcass/head.pug
+
+	body
+		<!-- sprite с svg-иконками -->
+		include components/sprite.pug
+		include components/sprite_social.pug
+
+		<!-- Шапка -->
+		include blocks/header.pug
+
+		<!-- Фильтр & Меню слева -->
+		include blocks/side/side.pug
+
+		<!-- Главный блок -->
+		include blocks/main.pug
+
+		i.main-overlay
+
+		//- <!-- GUI -->
+		//- include blocks/GUI.pug
+
+		<!-- Подрубка общих скриптов и библ. -->
+		script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js")
+
+		//- script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+		//- script(type="application/javascript" src='./js/jquery.fancybox.min.js')
+		//- script(type="application/javascript" src='./js/swiper.5.min.js')
+
+
+		<!-- Селекты -->
+		script(type="application/javascript" src='./js/select.js')
+		script(type="application/javascript" src='./js/main.js')
+
+		//- <!-- Для шапки => для каждой стр. -->
+		//- script(type="application/javascript" src='./js/header.js')

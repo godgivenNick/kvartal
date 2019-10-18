@@ -1,0 +1,94 @@
+.filter__hide-btn Показать фильтр
+.filter
+    .filter__header
+        span.filter__title Поиск по параметрам
+        .filter__reset-btn Сбросить фильтр
+    .filter-main
+        .dd.filter-main__dd
+            .dd__label Бизнес центр
+            select.dd__select( style='width: 100%;')
+                option(value="0" disabled='disabled') Не выбран
+                option(value="1") Бизнес центр 1
+                option(value="2") Бизнес центр 2
+                option(value="3") Бизнес центр 3
+
+        .dd.filter-main__dd
+            .dd__label Тип помещения
+            select.dd__select( style='width: 100%;')
+                option(value="0" disabled='disabled') Не выбран
+                option(value="1") Помещение 1
+                option(value="2") Помещение 2
+                option(value="3") Помещение 3
+
+        .double-input
+            span.double-input__label Площадь
+            input(type="text" placeholder='от').double-input__from
+            span
+            input(type="text" placeholder='до').double-input__to
+            .double-input__measure м<sup>2</sup>
+
+        .double-input
+            span.double-input__label Цена
+            input(type="text" placeholder='от').double-input__from
+            span
+            input(type="text" placeholder='до').double-input__to
+            .double-input-dd
+                select.dd__select( style='width: 100%;')
+                    option(value="1") ₽/мес.
+                    option(value="2") ₽/м<sup>2</sup>
+
+    
+    .filter-sub
+
+        <!-- Выбор этажей -->
+        .filter-sub-floors
+            span.filter-sub-floors__title Этаж
+            .filter-sub-floors__list
+                label.chfloor.filter-sub-floors__floor
+                    input(type="checkbox")
+                    span 0
+                label.chfloor.filter-sub-floors__floor
+                    input(type="checkbox")
+                    span 1
+                label.chfloor.filter-sub-floors__floor
+                    input(type="checkbox")
+                    span 2
+                label.chfloor.filter-sub-floors__floor
+                    input(type="checkbox")
+                    span 2a
+                label.chfloor.filter-sub-floors__floor
+                    input(type="checkbox")
+                    span 3
+                label.chfloor.filter-sub-floors__floor
+                    input(type="checkbox")
+                    span 4
+                label.chfloor.filter-sub-floors__floor
+                    input(type="checkbox")
+                    span 5
+
+
+        <!-- Остальные параметры со switch'ем -->
+        ul.filter-sub__switches
+            li.filter-sub__switch
+                span.filter-sub__switch-label Акция
+                label.switch
+                    input(type="checkbox")
+                    .switch__oval
+            li.filter-sub__switch
+                span.filter-sub__switch-label С кондиционером
+                label.switch
+                    input(type="checkbox")
+                    .switch__oval
+            li.filter-sub__switch
+                span.filter-sub__switch-label Своя планировка
+                label.switch
+                    input(type="checkbox")
+                    .switch__oval
+            li.filter-sub__switch
+                span.filter-sub__switch-label Показать занятые
+                label.switch
+                    input(type="checkbox")
+                    .switch__oval
+
+    button.filter__submit.btn.btn--blue Показать 125 помещений
+    .filter__show-sub Дополнительные параметры

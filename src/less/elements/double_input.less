@@ -1,0 +1,137 @@
+.gui .double-input {
+    max-width: 393px;
+}
+
+.double-input {
+
+    width: 100%;
+    // max-width: 393px;
+
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 4px;
+    border: solid 1px var(--light_pink);
+    background-color: var(--white);
+
+
+    &__label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: left;
+        color: var(--dark);
+
+        margin-right: auto;
+    }
+
+
+    &__measure {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: right;
+        color: var(--dark);
+
+        margin-left: auto;
+    }
+
+
+    input {
+        min-width: 0px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: center;
+        color: var(--cobalt_blue);
+
+        &::placeholder {
+            color: var(--brownish_grey);
+        }
+
+        &.double-input__from {
+            text-align: right;
+        }
+
+        &.double-input__to {
+            text-align: left;
+        }
+    }
+
+
+    &__from ~ span {
+        width: 1px;
+        height: calc(50px - 16px);
+        align-self: center;
+
+        background-color: var(--light_pink);
+
+        flex-shrink: 0;
+        margin: 0 16px;
+    }
+
+}
+
+
+
+
+/*   Дропдаун   */
+
+.double-input-dd {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+
+    .select2-container .select2-selection--single {
+        border: none;
+        height: 28px;
+
+        margin-top: 0px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 5px;
+        right: 0;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: right;
+        color: var(--dark);
+
+        margin-left: auto;
+        padding-left: 0;
+        padding-right: 25px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        margin-top: -4px;
+    }
+
+    .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+        background-color: var(--white);
+    }
+
+    .select2-container .select2-selection--single:hover {
+        background-color: var(--white);
+        .select2-selection__arrow b {
+            border-color: #707070;
+        }
+    }
+
+}

@@ -1,0 +1,175 @@
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	max-width: 1920px;
+  	overflow-x: hidden;
+
+
+	font-family: 'Roboto', sans-serif;
+	
+	* {
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+			margin: 0; padding: 0;
+			
+		&::after, &::before {
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
+			display: inline-block;
+		}
+
+		:active, :hover, :focus, select, option {
+    		outline: 0;
+    		outline-offset: 0;
+		}
+	}
+}
+
+input {
+	background-color: transparent;
+	border: none;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,p, span {
+	padding: 0;
+	margin: 0;
+}	
+
+a {
+	text-decoration: none; /* убираем подчеркивания*/
+	color: inherit;
+}
+
+ul {
+	list-style: none;  /* убираем маркировку списка*/
+}
+
+button {
+	border: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 200vh;
+}
+
+
+section {
+	width: 100%;
+}
+
+/**/
+.gui {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	padding: 80px 100px;
+
+	&__col {
+		width: 100%;
+		padding: 20px 40px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		border: 1px solid grey;
+		margin-bottom: 40px;
+	}
+
+	&__item {
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		border-bottom: 1px solid lightgrey;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+
+		&-title {
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1;
+			color: #212121;
+
+			margin-bottom: 15px;
+		}
+	}
+}
+/**/
+
+.main-overlay {
+    // z-index: 10;
+
+	// position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100vh;
+    // background-color: rgba(30, 42, 66, 0.65);
+    // visibility: visible;
+
+	// pointer-events: none;
+    // opacity: 0;
+	// -webkit-transition: .25s ease;
+	// transition: .25s ease;
+	
+	// &._show {
+	// 	pointer-events: auto;
+	// 	opacity: 1;
+	// 	-webkit-transition: .25s ease;
+	// 	transition: .25s ease;
+	// }
+}
+
+
+/* Общие стили для всей системы */
+.main {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+}
+
+
+@media only screen and (max-width: 1366px){
+	.gogi { width: 100%; }
+}
+
+@media only screen and (max-width: 1280px){
+	.gogi { width: 100%; }
+}
+
+
+// @media only screen and (min-width : 768px) and (max-width : 1024px) {
+// 	.gogi { width: 100%; }
+// }
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+	.gogi { width: 100%; }
+}
+
+// @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+// 	.gogi { width: 100%; }
+// }
+
+
+@media only screen and (max-width: 768px){
+	.gogi { width: 100%; }
+}
+
+@media only screen and (max-width: 640px){
+	.gogi { width: 100%; }
+}
+
+

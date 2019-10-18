@@ -1,0 +1,61 @@
+.gui .btn {
+    margin-bottom: 10px;
+    max-width: 393px;
+}
+
+.btn {
+    width: 100%;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+
+    transition: .25s ease;
+    cursor: pointer;
+
+
+    &--blue {
+        border-radius: 4px;
+        height: 54px;
+
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.56;
+        text-align: center;
+
+        background-color: var(--royal_blue);
+        color: #f9f9f9;
+
+        &:hover {
+            background-color: var(--cobalt_blue);
+        }
+
+        &:focus {
+            background-color: var(--royal_blue);
+        }
+    }
+
+    &--sun {
+        border-radius: 6px;
+        height: 68px;
+
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.56;
+        text-align: center;
+
+        background-color: var(--sun_yellow);
+        color: var(--dark);
+
+        &:hover {
+            background-color: var(--banana_yellow);
+        }
+
+        &:focus {
+            background-color: var(--sun_yellow);
+        }
+    }
+}

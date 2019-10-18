@@ -1,0 +1,105 @@
+.side {
+    width: 100%;
+    max-width: 490px;
+    height: 100vh;
+
+    background-color: var(--white);
+    border-right: 1px solid var(--lighter_pink);
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &__container {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        padding-top: calc(28px + 88px); // 88 - шапка
+        padding-left: 64px;
+        padding-right: 34px;
+        padding-bottom: 16px;
+        &._scroll {
+            overflow-y: scroll;
+        }
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1366px){
+
+    .side {
+        max-width: 340px;
+    }
+
+    .side__container {
+        padding-top: calc(24px + 88px);
+        padding-left: 35px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 1280px){
+
+    .side {
+        max-width: 316px;
+    }
+
+    .side__container {
+        padding-top: calc(24px + 88px);
+        padding-left: 28px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+
+        max-width: 316px;
+    }
+
+}
+
+
+//  Горизонталка
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+    .side {
+        max-width: 252px;
+    }
+    
+    .side__container {
+        padding-top: calc(24px + 88px);
+        padding-left: 16px;
+        padding-right: 8px;
+        padding-bottom: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 768px)  {
+
+    .side {
+        position: static;
+        margin-top: 88px;
+        max-width: 100%;
+    }
+
+    .side__container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+}
+
+@media only screen and (max-height: 940px){
+
+    .side__container {
+        // overflow-y: scroll;
+    }
+
+}

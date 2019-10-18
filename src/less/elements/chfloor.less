@@ -1,0 +1,43 @@
+.chfloor {
+
+    input {
+        display: none;
+    }
+
+    display: flex;
+
+    cursor: pointer;
+
+    span {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        border: solid 1px var(--light_pink);
+        background-color: var(--white);
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.7;
+        text-align: center;
+        color: var(--dark);
+
+        transition: .2s ease-out;
+    }
+
+
+    &:hover {
+        
+        span {
+            border-color: var(--cobalt_blue);
+            color: var(--cobalt_blue);
+        }
+    }
+
+    input:checked + span {
+        border-color: var(--cobalt_blue);
+        background-color: var(--cobalt_blue);
+        color: var(--lightest_pink);
+
+    }
+}

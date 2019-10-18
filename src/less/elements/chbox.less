@@ -1,0 +1,90 @@
+.chbox {
+
+    display: flex;
+    align-items: center;
+
+    input {
+        display: none;
+    }
+
+    cursor: pointer;
+
+
+    &__label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.46;
+        text-align: left;
+        color: #242424;
+
+        margin-left: 16px;
+    }
+
+
+    &__box {
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        border: solid 2px var(--light_pink);
+        background-color: var(--lightest_pink);
+
+        transition: .2s ease-out;
+
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+
+            width: 15px;
+            height: 12px;
+
+            position: absolute;
+            left: 3px;
+            top: 4px;
+
+            opacity: 0;
+            transition: .2s ease-out;
+        }
+
+        &::before {
+            background-image: url('../img/svg/check_grey.svg');
+        }
+
+        &::after {
+            background-image: url('../img/svg/check_white.svg');
+        }
+    }
+
+
+    input:checked {
+
+        & + .chbox__box {
+            border-color: var(--cobalt_blue);
+            background-color: var(--cobalt_blue);
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+
+    &:hover {
+        .chbox__box {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+}

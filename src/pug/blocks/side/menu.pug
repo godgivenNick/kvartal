@@ -1,0 +1,68 @@
+.side-menu
+
+    <!-- Дубль номера телефона для мобилки -->
+    a(href='tel:88127401902').side-menu__tel-mobile 8 (812) 740 19 02
+
+    <!-- Кнопка вернуться назад. Дисплеим, если это не домашняя стр. -->
+    a(href="").side-menu__back-btn ← Бизнес-центр «К-1»
+    ul.side-nav
+        <!-- Для текущей стр. добавляем к 'side-nav__item' класс '_current' -->
+        li.side-nav__item
+            a(href="") Объекты
+        li.side-nav__item
+            a(href="") О компании
+        li.side-nav__item
+            a(href="") Новости и статьи
+        li.side-nav__item
+            a(href="") Сервисы на сайте
+        li.side-nav__item
+            a(href="") Контакты
+        li.side-nav__item
+            a(href="") Отзывы
+
+        li.side-nav__item._favorites
+            a(href="")
+                <svg class='icon-star'>
+                  <use xlink:href="#star"></use>
+                </svg>Избранное <span>(2)</span>
+
+        li.side-nav__item._in-order
+            <!-- Отображаем только если в заявке что-то есть -->
+            a(href="") В заявке <span>(2)</span>
+
+    .side-menu__footer
+        a(href='').side-menu__footer-mail office@kvartal.biz
+
+        .side-menu__footer-links
+            a(href="").side-menu__footer-link.__vk
+                <svg>
+                    <use xlink:href="#vk"></use>
+                </svg>
+            a(href="").side-menu__footer-link.__fb
+                <svg>
+                    <use xlink:href="#fb"></use>
+                </svg>
+            a(href="").side-menu__footer-link.__odnoklassniki
+                <svg>
+                    <use xlink:href="#odnoklassniki"></use>
+                </svg>
+            a(href="").side-menu__footer-link.__inst
+                <svg>
+                    <use xlink:href="#inst"></use>
+                </svg>
+            a(href="").side-menu__footer-link.__twitter
+                <svg>
+                    <use xlink:href="#twitter"></use>
+                </svg>
+            a(href="").side-menu__footer-link.__tg
+                <svg>
+                    <use xlink:href="#tg"></use>
+                </svg>
+            a(href="").side-menu__footer-link.__whatsapp
+                <svg>
+                    <use xlink:href="#whatsapp"></use>
+                </svg>
+            a(href="").side-menu__footer-link.__viber
+                <svg>
+                    <use xlink:href="#viber"></use>
+                </svg>

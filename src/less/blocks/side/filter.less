@@ -1,0 +1,394 @@
+.filter {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+
+
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        margin-bottom: 8px;
+    }
+
+
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.45;
+        text-align: left;
+        color: var(--brownish_grey);
+    }
+
+
+    &__reset-btn {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.71;
+        text-align: right;
+        color: var(--royal_blue);
+
+        text-decoration: underline;
+        flex-shrink: 0;
+
+        transition: .2s ease-out;
+        cursor: pointer;
+    }
+
+
+    &__hide-btn {
+        display: none;
+    }
+}
+
+
+
+
+.filter-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    &__dd {
+        // margin-bottom: 8px;
+    }
+
+    .double-input {
+        margin-bottom: 8px;
+    }
+}
+
+
+.filter__submit {
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.filter__show-sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    text-align: center;
+    color: var(--brownish_grey);
+
+    text-decoration: underline;
+    align-self: center;
+
+    transition: .25s ease-out;
+    cursor: pointer;
+    &:hover {
+        color: var(--royal_blue);
+    }
+}
+
+
+
+
+//  Filter Sub
+.filter-sub {
+    width: 100%;
+    flex-direction: column;
+
+    transition: .25s ease-out;
+
+    margin-bottom: 16px;
+
+    display: none;
+    &._show {
+        display: flex;
+    }
+}
+
+
+//  Этажи
+.filter-sub-floors {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    padding: 16px 15px 8px 15px;
+    border-bottom: 1px solid var(--lighter_pink);
+
+
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 16px;
+        text-align: left;
+        color: var(--dark);
+
+        flex-shrink: 0;
+        margin-right: 16px;
+    }
+
+
+    &__list {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+    &__floor {
+        margin-bottom: 8px;
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+    }
+}
+
+
+
+//  Switches
+.filter-sub__switches {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-sub__switch {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 15px;
+    &:not(:last-child){
+        border-bottom: 1px solid var(--lighter_pink);
+    }
+}
+
+.filter-sub__switch-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+    text-align: left;
+    color: var(--dark);
+}
+
+
+
+//  Адаптив
+
+@media only screen and (max-width: 1366px)  {
+
+    .filter__title {
+        font-size: 18px;
+        line-height: 1.25;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px)  {
+
+    .filter__title {
+        display: none;
+    }
+
+
+    .filter__reset-btn {
+        width: 100%;
+    }
+
+
+    .filter__show-sub {
+        display: none;
+    }
+
+
+    .filter__hide-btn {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.56;
+        text-align: left;
+        color: var(--royal_blue);
+        background-color: var(--lightest_pink);
+
+        padding: 8px 20px;
+
+        cursor: pointer;
+        position: relative;
+        &::after {
+            content: '';
+
+            position: absolute;
+            right: 20px;
+            top: 24px;
+
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--royal_blue);
+            border-left: 0;
+            border-top: 0;
+            transform: rotate(45deg);
+        
+            margin-top: -8px;
+            
+            transition: .2s ease-out;
+        }
+
+
+        &._show {
+
+            &::after {
+                top: 28px;
+                transform: rotate(-135deg);
+            }
+        }
+    }
+
+
+    .filter {
+        padding: 24px 16px;
+        border-bottom: 1px solid var(--lighter_pink);
+
+        transition: .3s ease-out;
+        overflow: hidden;
+    }
+
+
+    .filter-main {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .filter-main__dd {
+        width: calc(50% - 8px);
+    }
+
+
+    .filter-main .double-input {
+        width: calc(50% - 8px);
+    }
+
+
+    .filter-sub {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .filter-sub-floors {
+        width: 100%;
+        justify-content: center;
+
+        padding: 16px 0px 16px 0;
+        border-bottom: none;
+    }
+
+
+    .filter-sub-floors__list {
+        width: auto;
+    }
+
+
+    .filter-sub__switches {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .filter-sub__switch {
+        width: calc(50% - 8px);
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            border-top: 1px solid var(--lighter_pink);
+            border-bottom: 1px solid var(--lighter_pink);
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            border-top: none;
+            border-bottom: 1px solid var(--lighter_pink);
+        }
+    }
+
+
+    .filter__submit {
+        max-width: 355px;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 640px)  {
+
+    .filter__hide-btn {
+        padding: 8px 16px;
+    }
+
+
+    .filter__header {
+        margin-bottom: 24px;
+    }
+
+
+    .filter {
+        padding: 16px 16px 24px 16px;
+    }
+
+
+    .filter-main__dd {
+        width: 100%;
+    }
+
+    .filter-main .double-input {
+        width: 100%;
+    }
+
+
+    .filter-sub-floors {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-sub-floors__title {
+        margin-bottom: 8px;
+    }
+
+    .filter-sub__switch {
+        width: 100%;
+
+        &:nth-child(n) {
+            border-top: 0;
+            border-bottom: 1px solid var(--lighter_pink);
+        }
+
+        &:last-child {
+            border-top: 0;
+            border-bottom: 0;
+        }
+    }
+
+
+    .filter__submit {
+        max-width: 100%;
+    }
+}
