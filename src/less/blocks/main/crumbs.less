@@ -1,0 +1,50 @@
+.crumbs {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	&__item {
+
+		position: relative;
+
+		&:not(:last-child){
+
+			padding-right: 12px;
+			margin-right: 6px;
+
+			&::after {
+				content: '/';
+				font-family: 'Roboto', sans-serif;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 1.75;
+				text-align: left;
+				color: var(--brownish_grey);
+	
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+		}
+
+
+		a {
+			font-family: 'Roboto', sans-serif;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 1.75;
+			text-align: left;
+			color: var(--brownish_grey);
+
+			transition: .2s ease-out;
+			cursor: pointer;
+			&:hover {
+				text-decoration: underline;
+				color: var(--royal_blue);
+			}
+		}
+	}
+}

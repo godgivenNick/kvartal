@@ -4,8 +4,7 @@ html, body {
 	padding: 0;
 
 	max-width: 1920px;
-  	overflow-x: hidden;
-
+  overflow-x: hidden;
 
 	font-family: 'Roboto', sans-serif;
 	
@@ -57,6 +56,8 @@ body {
   flex-direction: column;
 
   min-height: 200vh;
+  width: 100%;
+  max-width: 100%;
 }
 
 
@@ -135,12 +136,6 @@ section {
 
 
 /* Общие стили для всей системы */
-.main {
-	width: 100%;
-	display: flex;
-	align-items: flex-start;
-}
-
 
 @media only screen and (max-width: 1366px){
 	.gogi { width: 100%; }
@@ -150,14 +145,18 @@ section {
 	.gogi { width: 100%; }
 }
 
+@media only screen and (max-width: 1024px){
+	.gogi { width: 100%; }
+}
+
 
 // @media only screen and (min-width : 768px) and (max-width : 1024px) {
 // 	.gogi { width: 100%; }
 // }
 
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
-	.gogi { width: 100%; }
-}
+// @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+// 	.gogi { width: 100%; }
+// }
 
 // @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
 // 	.gogi { width: 100%; }

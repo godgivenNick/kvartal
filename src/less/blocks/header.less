@@ -166,6 +166,9 @@
 
 @media only screen and (max-width: 1024px) {
 
+  .header {
+    padding: 0 16px;
+  }
 
 }
 
@@ -178,31 +181,27 @@
 
     .header__tel {
         margin-left: auto;
-        margin-right: 26px;
+        margin-right: 24px;
     }
 
 }
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-
-    .header {
-        padding: 0 25px 0 16px;
-    }
-
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-
-    .header {
-        padding: 0 20px 0 20px;
-    }
-}
-
-
 
 
 @media screen and (max-width: 640px){
+
     .header__tel {
         display: none;
+    }
+
+    .logo__name {
+      font-size: 25px;
+      line-height: 0.8;
+      letter-spacing: 1.25px;
+    }
+
+
+    .logo__desc {
+      font-size: 12px;
+      line-height: 1.67;
     }
 }

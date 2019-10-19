@@ -31,10 +31,6 @@ var client_inner_height = window.innerHeight;
 function add_scroll_or_not(){
 
     left_block_cont_height = window.getComputedStyle(left_block_cont).height;
-    // console.log(left_block_cont_height);
-    // console.log(client_inner_height);
-    
-
 
     if(+client_inner_height < parseInt(left_block_cont_height, 10)){
         left_block_cont.classList.add('_scroll');
@@ -59,8 +55,11 @@ show_filter_subs_btn.addEventListener('click', function(e){
         filter_subs.classList.remove('_show');
         show_filter_subs_btn.innerText = 'Дополнительные параметры';
     }
+
+    if(!left_block_cont.classList.contains('_scroll')){
+      add_scroll_or_not();
+    }
     
-    add_scroll_or_not();
 });
 
 
@@ -72,8 +71,9 @@ if(+client_width <= 768){
     var filter_h = window.getComputedStyle(filter).height;
     var filter_patop = window.getComputedStyle(filter).paddingTop;
     var filter_pabot = window.getComputedStyle(filter).paddingBottom;
+    var filter_mabot = window.getComputedStyle(filter).marginBottom;
 
-    filter.setAttribute('style', 'height: 0; padding-top: 0; padding-bottom: 0;');
+    filter.setAttribute('style', 'height: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 0;');
 
     var filter_hide_btn = document.querySelector('.filter__hide-btn');
     filter_hide_btn.addEventListener('click', function(){
@@ -81,15 +81,12 @@ if(+client_width <= 768){
         if(!filter_hide_btn.classList.contains('_show')){
             filter_hide_btn.classList.add('_show');
             filter_hide_btn.innerText = 'Скрыть фильтр';
-            filter.setAttribute('style', 'height: ' + filter_h + '; ' + 'padding-top: ' + filter_patop + ';' + 'padding-bottom: ' + filter_pabot + ';');
+            filter.setAttribute('style', 'height: ' + filter_h + '; ' + 'padding-top: ' + filter_patop + ';' + 'padding-bottom: ' + filter_pabot + ';' + 'margin-bottom: ' + filter_mabot + ';');
 
         } else {
             filter_hide_btn.classList.remove('_show');
             filter_hide_btn.innerText = 'Показать фильтр';
-            filter.setAttribute('style', 'height: 0; padding-top: 0; padding-bottom: 0;');
-
-
-
+            filter.setAttribute('style', 'height: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 0;');
         }
 
     });
@@ -97,4 +94,10 @@ if(+client_width <= 768){
 }
 
 
+
+
+
+
+
+//  END
 });
