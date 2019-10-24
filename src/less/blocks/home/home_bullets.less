@@ -1,0 +1,119 @@
+.home-bullets {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 170px; // 30 до 200 от карточки
+
+    &__title {
+        max-width: 882px;
+        margin-bottom: 110px;
+    }
+
+
+    &__list {
+        width: 100%;
+
+        display: flex;
+        align-items: stretch;
+    }
+
+
+    &__item {
+        width: calc(100% / 3 - 20px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 40px 40px;
+        border-radius: 10px;
+        border: solid 1px var(--royal_blue);
+        background-color: rgba(0, 6, 105, 0);
+
+        margin-bottom: 30px;
+        min-height: 248px; // чтоб вывернуться
+
+        &:nth-child(3n + 2){
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+    }
+
+
+    &__item-title {
+        color: var(--royal_blue);
+        margin-bottom: 8px;
+    }
+}
+
+
+@media only screen and (max-width: 1366px){
+
+    .home-bullets__item {
+        padding: 32px 35px 32px 24px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .home-bullets__list {
+        flex-wrap: wrap;
+    }
+
+    .home-bullets__title {
+        margin-bottom: 80px;
+    }
+
+    .home-bullets__item {
+        padding: 32px 16px 32px 16px;
+        
+        width: calc(50% - 15px);
+        &:nth-child(3n+2){
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        &:nth-child(2n+1){
+            margin-right: 30px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+
+    .home-bullets__title {
+        margin-bottom: 48px;
+    }
+
+}
+
+
+@media only screen and (max-width: 640px){
+
+    .home-bullets {
+        margin-bottom: 120px;
+    }
+
+    .home-info__title {
+        margin-bottom: 48px;
+    }
+
+    .home-bullets__item {
+        min-height: 0;
+        
+        width: 100%;
+
+        &:nth-child(2n+1){
+            margin-right: 0px;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+        }   
+    }
+
+}

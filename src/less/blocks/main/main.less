@@ -2,8 +2,10 @@
 	flex-direction: column;
 	align-items: center;
 
-	padding-top: 16px; 
+	padding-top: 16px;
 	padding-bottom: 16px;
+
+	min-height: calc(100vh - 88px - 139px); // минус шапка и минус футер
 
 	margin-top: 88px;
 }
@@ -97,6 +99,7 @@
 
 	.main {
 		margin-top: 0px;
+		min-height: calc(100vh - 88px - 139px - 45px); // добавил 45 для фильтра
 	}
 }
 
@@ -117,6 +120,11 @@
 			margin-bottom: 24px;
 		}
 
+	}
+
+
+	.main {
+		min-height: calc(100vh - 88px - 233px - 45px);
 	}
 
 }

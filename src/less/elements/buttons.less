@@ -13,7 +13,7 @@
 
     font-family: 'Roboto', sans-serif;
 
-    transition: .25s ease;
+    transition: .25s ease-out;
     cursor: pointer;
 
 
@@ -56,6 +56,30 @@
 
         &:focus {
             background-color: var(--sun_yellow);
+        }
+    }
+
+
+
+    &--default {
+        height: 40px;
+        border-radius: 4px;
+
+        border: solid 1px var(--brownish_grey);
+        background-color: var(--white);
+
+        padding: 0 24px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.43;
+        text-align: center;
+        color: var(--brownish_grey);
+
+        &:hover {
+            border-color: var(--cobalt_blue);
+            color: var(--cobalt_blue);
         }
     }
 }

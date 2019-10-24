@@ -1,0 +1,28 @@
+mixin about_benefits_item(n, text)
+    .about-benefits__item
+        span.about-benefits__item-title.page-title= n
+        p.about-benefits__item-text.text-title= text
+
+section.about-benefits
+    .about-benefits__title.page-title Преимущества
+    .about-benefits__list
+        +about_benefits_item('01.', 'Гарантированно низкая стоимость аренды')
+        +about_benefits_item('02.', 'Высокая степень ответственности хозяина')
+        +about_benefits_item('03.', 'Гибкие и прозрачные условия сотрудничества')
+
+
+<!-- Как арендовать помещение -->
+section.about-how
+    .about-how__title.page-title Как арендовать помещение
+    .about-how__list
+        .about-how__item
+            span.about-how__item-title.text-title 1. Выберите помещение
+            p.about-how__item-text Найти помещение можно с помощью фильтра на сайте или интерактивной планировки, которая есть на странице каждого бизнес-центра
+
+        .about-how__item
+            span.about-how__item-title.text-title 2. Оставьте заявку
+            p.about-how__item-text Позвоните по телефону <a class='about-how__item-tel' href='tel:88127401902'>8 (812) 740 19 02</a> или оставьте заявку через <a class='about-how__item-btn' href=''>форму обратной связи</a>
+
+        .about-how__item
+            span.about-how__item-title.text-title 3. Приезжайте на осмотр
+            p.about-how__item-text Назначьте день и время, а так же укажите объект, в котором планируется осмотр и приезжайте, ждем вас!

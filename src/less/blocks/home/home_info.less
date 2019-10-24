@@ -1,0 +1,174 @@
+.home-info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 170px; // + 30 от текста
+
+
+    &__title {
+        margin-bottom: 110px;
+        max-width: 882px;
+    }
+}
+
+
+
+//  Bullets
+.home-info-bullets {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-bottom: 110px;
+
+
+    &__item {
+        width: calc(100% / 3 - 20px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-bottom: 48px;
+
+        &:nth-child(3n + 2){
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+    }
+
+
+    &__item-title {
+        margin-bottom: 48px;
+    }
+}
+
+
+
+//  основной контент
+.home-info__container {
+    width: 100%;
+    max-width: 882px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.home-info__sub-title {
+    margin-bottom: 56px;
+    &:first-of-type {
+        margin-bottom: 110px;
+    }
+
+    a {
+        transition: .2s ease-out;
+        &:hover {
+            text-decoration: underline;
+            color: var(--royal_blue);
+        }
+    }
+}
+
+.home-info__text {
+
+    margin-bottom: 32px;
+
+}
+
+
+.home-info__list {
+
+    margin-bottom: 110px;
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1366px){
+
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .home-info__title {
+        margin-bottom: 80px;
+    }
+
+    .home-info-bullets {
+        margin-bottom: 32px;
+    }
+
+    .home-info-bullets__item {
+        
+        width: calc(50% - 15px);
+        &:nth-child(3n+2){
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        &:nth-child(2n+1){
+            margin-right: 30px;
+        }
+    }
+
+
+
+
+    .home-info__sub-title {
+
+        &:first-of-type {
+            margin-bottom: 80px;
+        }
+    }
+
+    .home-info__list {
+        margin-bottom: 80px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 640px){
+
+    .home-info {
+        margin-bottom: 120px;
+    }
+
+    .home-info-bullets__item {
+        
+        width: 100%;
+
+        &:nth-child(2n+1){
+            margin-right: 0px;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+        }   
+    }
+
+    .home-info__sub-title a {
+        text-decoration: underline;
+        color: var(--royal_blue);
+        &:active {
+            text-decoration: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+

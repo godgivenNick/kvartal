@@ -1,0 +1,35 @@
+.list {
+    display: flex;
+    flex-direction: column;
+
+
+    li {
+        margin-bottom: 16px;
+        padding-left: 32px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.56;
+        text-align: left;
+        color: var(--dark);
+
+        position: relative;
+        &::before {
+            content: '';
+
+            position: absolute;
+            left: 0;
+            top: 10px;
+
+            width: 8px;
+            height: 8px;
+            background-color: var(--light_pink);
+        }
+    }
+}
+
+
+
+
+

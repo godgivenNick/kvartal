@@ -1,0 +1,337 @@
+.form-gg {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--royal_blue);
+
+    padding: 110px 150px 80px 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__title {
+        color: #f9f9f9;
+        text-align: center;
+
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.45;
+        text-align: center;
+        color: #f9f9f9;
+
+        margin-bottom: 48px;
+    }
+
+
+    &__text-min {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        text-align: center;
+        color: var(--light_pink);
+
+        margin-top: 16px;
+    }
+
+
+    &__form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    &__btn {
+        height: 50px;
+        width: 274px;
+        flex-shrink: 0;
+
+        margin-left: 30px;
+        font-weight: 400;
+
+        margin-bottom: 9px;
+    }
+}
+
+
+
+
+.dd__bc {
+    width: 100%;
+    max-width: 240px;
+}
+
+.dd__date,
+.dd__time {
+    width: 100%;
+}
+
+.dd__date {
+    max-width: 120px;
+}
+
+.dd__time {
+    max-width: 130px;
+}
+
+.dd__tel {
+
+    max-width: 240px;
+    min-width: 120px;
+
+    .dd__input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid var(--light_pink);
+        border-left: 0;
+        margin-bottom: 8px;
+        background: white;
+        width: 100%;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        padding-left: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: left;
+        color: var(--royal_blue);
+        &::placeholder {
+            color: var(--dark);
+        }
+    }
+}
+
+
+.dd__date {
+
+    position: relative;
+    cursor: pointer;
+
+    .dd__input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid var(--light_pink);
+        border-right: 0;
+        margin-bottom: 8px;
+        background: white;
+        width: 100%;
+
+        padding-left: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: left;
+        color: var(--royal_blue);
+        &::placeholder {
+            color: var(--dark);
+        }
+
+        display: flex;
+        align-items: flex-end;
+        padding-top: 25px;
+        padding-bottom: 8px;
+    }
+
+
+    &:hover {
+
+        .dd__arrow span {
+            border-color: var(--royal_blue);
+        }
+    }
+}
+
+
+.dd__arrow {
+    height: 26px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 20px;
+
+    span {
+        left: 50%;
+        margin-left: -4px;
+        position: absolute;
+        top: 50%;
+
+        width: 8px;
+        height: 8px;
+        border: 1px solid #707070;
+        border-left: 0;
+        border-top: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: -8px;
+        transition: 0.2s ease-out;
+    }
+
+    &._focus {
+
+        span {
+            transform: rotate(-135deg);
+            margin-top: -3px;
+        }
+    }
+
+}
+
+
+//  Datepick custom
+.ui-widget {
+    font-family: 'Roboto', sans-serif;
+}
+
+.ui-widget-header {
+    border: none;
+    background: white;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url('../img/svg/arrow_left.svg');
+    background-position: center center;
+    background-size: cover;
+    width: 8px;
+    height: 16px;
+}
+
+.ui-datepicker-next .ui-icon {
+    background-image: url('../img/svg/arrow_right.svg');
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    border: none;
+    background: var(--light_grey_green);
+    color: var(--dark);
+}
+
+.ui-datepicker th {
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 1800px){
+
+    .form-gg {
+        padding: 110px 30px 80px 30px;
+    }
+
+    .form-gg__form {
+        flex-direction: column;
+
+        .dd-row {
+            justify-content: center;
+        }
+    }
+
+    .form-gg__btn {
+        margin-bottom: 0;
+        margin-top: 16px;
+        margin-left: 0;
+    }
+
+    .dd__tel {
+        max-width: 240px;
+    }
+
+    .dd__tel {
+        width: auto;
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .form-gg {
+        padding: 56px 24px 32px 24px;
+    }
+
+    .dd__bc {
+        max-width: 180px;
+    }
+
+}
+
+
+@media only screen and (max-width: 640px){
+
+    .form-gg {
+        padding: 56px 16px 32px 16px;
+
+
+        &__title {
+            display: none;
+        }
+
+        .dd-row {
+            flex-wrap: wrap;
+        }
+
+        
+    } 
+
+    .dd__bc {
+        max-width: 100%;
+    }
+
+    .dd-row .dd.dd__bc .select2-container .select2-selection--single {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .dd__date,
+    .dd__time {
+        max-width: 50%;
+    }
+
+    .dd-row .dd.dd__date .select2-container .select2-selection--single {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    
+    
+    .dd-row .dd.dd__time .select2-container .select2-selection--single {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .dd__tel {
+        max-width: 100%;
+        width: 100%;
+
+        .dd__input {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+    }
+
+    .form-gg__btn {
+        width: 100%;
+    }
+
+
+
+    .dd__date .dd__input {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+}

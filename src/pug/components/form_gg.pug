@@ -1,0 +1,33 @@
+section.form-gg
+    .form-gg__title.page-title Выгодная аренда — залог успешного предпринимательства
+    p.form-gg__text Выберите бизнес-центр из предложенных в списке и оставьте заявку на просмотр
+
+    form(action="").form-gg__form
+        .dd-row
+            .dd.dd__bc
+                .dd__label Бизнес центр
+                select.dd__select( style='width: 100%;')
+                    option(value="0" disabled='disabled') Не выбран
+                    option(value="1") Бизнес-центр «К-1»
+                    option(value="2") Бизнес-центр «К-2»
+                    option(value="3") Бизнес-центр «К-3»
+            .dd.dd__date
+                .dd__label Дата
+                .dd__arrow
+                    span
+                input(type="text" id="form_gg_datepicker").dd__input
+
+            .dd.dd__time
+                .dd__label Время
+                select.dd__select( style='width: 100%;')
+                    option(value="0" disabled='disabled') Не выбрано
+                    option(value="1") 10:00 - 11:00
+                    option(value="2") 11:00 - 12:00
+                    option(value="3") 12:00 - 13:00
+            .dd.dd__tel
+                input(type="text" placeholder='Телефон для связи').dd__input
+
+            
+        button.form-gg__btn.btn.btn--sun Записаться на просмотр
+
+    p.form-gg__text-min Подтвердим по телефону. Нажимая на кнопку «Записаться на просмотр» вы соглашаетесь на обработку персональных данных согласно условиям.

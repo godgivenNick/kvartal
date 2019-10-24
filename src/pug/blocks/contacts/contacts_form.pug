@@ -1,0 +1,16 @@
+section.contacts-form
+    .contacts-form__title.page-title Задайте вопрос руководству «Квартал»
+    p.contacts-form__text Ответ можно получить как по эл. почте, так и по телефону за несколько минут
+
+    form(action="").contacts-form__form
+        .contacts-form__form-row(form-step='1')._show
+            input(type="text" question placeholder='Напишите свой вопрос')
+            .contacts-form__btn.btn.btn--sun(next) Далее
+        .contacts-form__form-row(form-step='2')
+            input(type="text" placeholder='Мобильный телефон или эл. почта')
+            button(type='submit').contacts-form__btn.btn.btn--sun Отправить
+
+<!-- Так будет выглядеть этот блок после успешной отправки формы. Саму форму display:none, а текст просто поменять на тот, что ниже -->
+section.contacts-form
+    .contacts-form__title.page-title Спасибо за вопрос!
+    p.contacts-form__text Мы скоро свяжемся с вами или пришлем ответ на указанный электронный адрес.

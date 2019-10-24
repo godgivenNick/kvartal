@@ -1,0 +1,77 @@
+.add-fav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--dark);
+    border-radius: 4px;
+    opacity: .5;
+    transition: .2s ease-out;
+    cursor: pointer;
+    padding: 8px 8px;
+    height: 32px;
+    width: 32px;
+    overflow: hidden;
+
+
+    svg {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        fill: #f9f9f9;
+        transition: .2s ease-out;
+    }
+
+    span {
+        margin-left: 8px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 1;
+        text-align: left;
+        color: #f9f9f9;
+
+        transition: .25s ease;
+        overflow: hidden;
+
+        height: 13px;
+
+        &.add-fav__add {
+            width: 77px;
+        }
+
+        &.add-fav__rem {
+            width: 51px;
+            display: none;
+        }
+    }
+
+
+
+    &:hover {
+        opacity: .7;
+        width: calc(32px + 8px + 77px);
+    }
+
+
+    &._added {
+
+        svg {
+            fill: var(--sun_yellow);
+        }
+
+        .add-fav__add {
+            display: none;
+        }
+
+        .add-fav__rem {
+            display: flex;
+        }
+
+        &:hover {
+            width: calc(32px + 8px + 51px);
+        }
+    }
+
+}

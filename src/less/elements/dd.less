@@ -28,6 +28,16 @@
         pointer-events: none;
 
         transition: .2s ease-out;
+
+        &._focus {
+            top: 8px;
+
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: left;
+            color: var(--brownish_grey);
+        }
     }
 
     &._selected {
@@ -164,7 +174,7 @@
 
 // расположение стрелки
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top: 16px;
+    top: 14px;
     right: 14px;  
 }
 
@@ -239,24 +249,15 @@
 
     .dd {
 
-        &:first-child {
+        &.dd__bc {
             .select2-container .select2-selection--single {
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
         }
 
-        &:nth-child(2) {
-            width: 125px;
-        }
-
-        &:nth-child(3) {
-            width: 155px;
-        }
-
-        &:nth-child(2),
-        &:nth-child(3){
-
+        &.dd__date,
+        &.dd__time {
 
             .select2-container .select2-selection--single {
                 border-left: 0;
@@ -268,17 +269,23 @@
                 border-bottom-right-radius: 0;
 
                 position: relative;
-                &::after {
+                &::after,
+                &::before {
                     content: '';
 
                     width: 1px;
-                    height: 40px;
+                    height: 32px;
                     background-color: #c3c3c3;
 
                     position: absolute;
 
                     right: 0;
-                    top: 10px;
+                    top: 8px;
+                }
+
+                &::before {
+                    right: auto;
+                    left: 0;
                 }
             }
         }

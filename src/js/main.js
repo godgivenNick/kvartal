@@ -95,8 +95,88 @@ if(+client_width <= 768){
 
 
 
+//  Управление формой на стр. Контакты
+
+if(document.querySelector('.contacts-form__form')){
 
 
+var contacts_form = document.querySelector('.contacts-form__form');
+var contacts_form_next_btn = contacts_form.querySelector('[next]');
+var contacts_form_question = contacts_form.querySelector('[question]');
+var contacts_form_step_1 = contacts_form.querySelector('[form-step="1"]');
+var contacts_form_step_2 = contacts_form.querySelector('[form-step="2"]');
+
+
+contacts_form_next_btn.addEventListener('click', function(){
+
+    if(contacts_form_question.value != ''){
+        contacts_form_question.classList.remove('_alert');
+        contacts_form_step_1.classList.remove('_show');
+        contacts_form_step_2.classList.add('_show');
+    } else {
+        contacts_form_question.classList.add('_alert');
+    }
+
+});
+
+}
+
+
+
+//  Цветные плашечки для свободных помещений, стр. "Главная"
+if(document.querySelector('.home-bc')){
+
+    var bill_width = parseInt(window.getComputedStyle(document.querySelector('.home-bc-item-bill')).width, 10);
+
+    Array.from(document.querySelectorAll('.home-bc-item-bill__amount')).forEach(function(each){
+
+        var low_percent = 0.1; //   начиная с какого процентного отношения хуячим красный цвет для плашки ( по дефолту 10% )
+
+        var each_all = +each.getAttribute('all');
+        var each_free = +each.innerHTML;
+        var each_percent = each_free / each_all;
+        // console.log(each_all + ' -- ' + each_free + ' -- ' + each_free / each_all * 100 + '%');
+
+        if(each_percent <= low_percent){
+            each.classList.add('_low');
+        } else {
+            var each_width = bill_width * each_percent;
+            each.setAttribute('style', 'width: ' + each_width + 'px;');
+        }
+
+
+    });
+
+}
+
+
+
+//  Datepicker для синей формы
+if(document.querySelector('.form-gg')){
+
+    var form_gg_datepicker = document.querySelector('#form_gg_datepicker');
+    form_gg_datepicker.addEventListener('focus', function(e){
+        e.target.closest('.dd').querySelector('.dd__label').classList.add('_focus');
+        e.target.closest('.dd').querySelector('.dd__arrow').classList.add('_focus');
+    });
+
+    $( "#form_gg_datepicker" ).datepicker({
+
+        dateFormat : 'dd.mm.yy',
+        dayNames: [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" ],
+        dayNamesMin : [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+        monthNames : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+
+        onClose: function(){
+
+            if(this.value == ''){
+                this.closest('.dd').querySelector('.dd__label').classList.remove('_focus');
+            }   
+
+        },
+
+    });
+}
 
 
 //  END

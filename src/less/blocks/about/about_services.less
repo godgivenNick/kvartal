@@ -1,0 +1,80 @@
+.about-services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 120px; // 80 от итемов
+
+
+    &__title {
+        margin-bottom: 110px;
+    }
+
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        
+        margin-bottom: 80px;
+        
+        width: calc(100% / 3 - 20px);
+        &:nth-child(3n+2){
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+
+        &-title {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .about-services__item {
+        margin-bottom: 80px;
+        
+        width: calc(50% - 15px);
+        &:nth-child(3n+2){
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        &:nth-child(2n+1){
+            margin-right: 30px;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 640px){
+
+    .about-services__title {
+        margin-bottom: 80px;
+    }
+
+    .about-services__item {
+        margin-bottom: 48px;
+        
+        width: 100%;
+
+        &:nth-child(2n+1){
+            margin-right: 0px;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+        }   
+    }
+
+}
