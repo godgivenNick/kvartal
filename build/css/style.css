@@ -886,9 +886,13 @@ section {
   text-align: left;
   color: #f9f9f9;
   transition: 0.2s ease-out;
+  text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
 }
 .header__tel:hover {
-  text-decoration: underline;
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
 }
 .logo {
   display: flex;
