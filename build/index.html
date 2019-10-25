@@ -89,10 +89,10 @@
 <path d="M8 12.859L12.944 16l-1.312-5.92L16 6.1l-5.752-.514L8 0 5.752 5.583 0 6.1l4.368 3.98L3.056 16z"></path>
 </symbol>
 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" id="view_list">
-<path d="M0 10.286h4.706V5.714H0zM0 16h4.706v-4.571H0zM0 4.571h4.706V0H0zm5.882 5.714H20V5.714H5.882zm0 5.714H20v-4.57H5.882zm0-16v4.572H20V0z" fill="#000bb3"></path>
+<path d="M0 10.286h4.706V5.714H0zM0 16h4.706v-4.571H0zM0 4.571h4.706V0H0zm5.882 5.714H20V5.714H5.882zm0 5.714H20v-4.57H5.882zm0-16v4.572H20V0z"></path>
 </symbol>
 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15" id="view_plitka">
-<path d="M0 6.923h5.882V0H0zM0 15h5.882V8.077H0zm7.059 0h5.882V8.077H7.059zm7.059 0H20V8.077h-5.882zM7.059 6.923h5.882V0H7.059zM14.118 0v6.923H20V0z" fill="#9c9c9c"></path>
+<path d="M0 6.923h5.882V0H0zM0 15h5.882V8.077H0zm7.059 0h5.882V8.077H7.059zm7.059 0H20V8.077h-5.882zM7.059 6.923h5.882V0H7.059zM14.118 0v6.923H20V0z"></path>
 </symbol>
 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.089 15.306" id="way">
 <path d="M16.071 0l-4.018 4.082h3.013v7.143a2.009 2.009 0 1 1-4.018 0V4.082a4.018 4.018 0 1 0-8.036 0v7.143H0l4.018 4.082 4.018-4.082H5.022V4.082a2.009 2.009 0 1 1 4.018 0v7.143a4.018 4.018 0 1 0 8.036 0V4.082h3.013z" fill="#f9f9f9"></path>
@@ -277,114 +277,218 @@
         </div>
       </div>
     </section><!-- Главный блок --><!-- Тут буду поочередно подрубать странички -->
-    <main class="main"><!-- стр. "Главная" --><!-- Главный разворот с карточками бизнес-центров -->
-      <section class="home-bc">
-        <div class="home-bc__title page-title">Коммерческая недвижимость от собственника в Санкт-Петербурге</div>
-        <div class="home-bc__container">
-          <div class="home-bc-item">
-            <div class="home-bc-item__name">Бизнес-центр «К-1»</div><span class="home-bc-item__class">Класс В+</span><img class="home-bc-item__img" src="./img/bc/bc_1.jpg" alt="">
-            <p class="home-bc-item__address text-18-dark">Ново-Рыбинская 19/21, Московский р-н</p>
-            <ul class="home-bc-item__metro">
-              <li class="home-bc-item__metro-item icon-metro__blue">Московские Ворота, Фрунзенская</li>
-              <li class="home-bc-item__metro-item icon-metro__violet">Обводный Канал</li>
-            </ul><a class="home-bc-item__tel text-18-dark" href="tel: 88127401902">8 (812) 740-19-02</a>
-            <p class="home-bc-item__places">Количество свободных помещений от 70 м² до 797 м²</p>
-            <ul class="home-bc-item__bills">
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Офисы</div>
-                <div class="home-bc-item-bill__param">от 450 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="64">23</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Склады</div>
-                <div class="home-bc-item-bill__param">от 1 050 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="64">10</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Производство</div>
-                <div class="home-bc-item-bill__param">от 950 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="20">2</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Торговые</div>
-                <div class="home-bc-item-bill__param">от 1 500 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="47">30</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Свободного назначения</div>
-                <div class="home-bc-item-bill__param">от 450 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="26">12</div>
-              </li>
-            </ul><a class="home-bc-item__btn" href="">Смотреть планировки помещений</a>
+    <main class="main"><!-- Хлебные крошки -->
+      <ul class="crumbs">
+        <li class="crumbs__item"><a href="">Главная</a></li>
+        <li class="crumbs__item"><a href="">Next page</a></li>
+        <li class="crumbs__item"><a href="">Next next page</a></li>
+      </ul><!-- стр. "Результат поиска" -->
+      <section class="search">
+        <h1>По выбранным параметрам найдено 666 помещений</h1>
+        <div class="search__sort sort"><span class="sort__title">Сортировать:</span>
+          <div class="sort__list"><!-- Для выбранного варианта сортировки добавляем к кнопке '.sort__btn' класс '._current' --><a class="sort__btn _current" href="javascript:void(0)">По помещениям</a><a class="sort__btn" href="javascript:void(0)">По бизнес-центрам</a></div>
+        </div>
+        <div class="search-result">
+          <div class="search-result__header">
+            <div class="search-result__title text-title">Офисы с ремонтом</div>
+            <div class="search-result__output-ctrls output-ctrls"><!-- Для текущего варианта выгрузки карточек добавляем класс '._current' для тега с классом '.search-result__ctrl'. --><a class="search-result__ctrl output-ctrl _current" href="javascript:void(0)"><svg>
+<use xlink:href="#view_plitka"></use>
+</svg><span>Плиткой</span></a><a class="search-result__ctrl output-ctrl" href="javascript:void(0)"><svg>
+<use xlink:href="#view_list"></use>
+</svg><span>Списком</span></a></div>
           </div>
-          <div class="home-bc-item">
-            <div class="home-bc-item__name">Бизнес-центр «К-2»</div><span class="home-bc-item__class">Класс В+</span><img class="home-bc-item__img" src="./img/bc/bc_2.jpg" alt="">
-            <p class="home-bc-item__address text-18-dark">Обуховской Обороны 86, лит. М, Невский р-н</p>
-            <ul class="home-bc-item__metro">
-              <li class="home-bc-item__metro-item icon-metro__green">Елизаровская, Ломоносовская</li>
-            </ul><a class="home-bc-item__tel text-18-dark" href="tel: 88124545754">8 (812) 454-57-54</a>
-            <p class="home-bc-item__places">Количество свободных помещений от 70 м² до 797 м²</p>
-            <ul class="home-bc-item__bills">
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Офисы</div>
-                <div class="home-bc-item-bill__param">от 450 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="55">10</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Склады</div>
-                <div class="home-bc-item-bill__param">от 1 050 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="78">23</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Производство</div>
-                <div class="home-bc-item-bill__param">от 950 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="33">22</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Торговые</div>
-                <div class="home-bc-item-bill__param">от 1 500 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="33">3</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Свободного назначения</div>
-                <div class="home-bc-item-bill__param">от 450 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="26">12</div>
-              </li>
-            </ul><a class="home-bc-item__btn" href="">Смотреть планировки помещений</a>
-          </div>
-          <div class="home-bc-item">
-            <div class="home-bc-item__name">Бизнес-центр «К-3»</div><span class="home-bc-item__class">Класс В, C</span><img class="home-bc-item__img" src="./img/bc/bc_3.jpg" alt="">
-            <p class="home-bc-item__address text-18-dark">Арсенальная 78, Калининский р-н</p>
-            <ul class="home-bc-item__metro">
-              <li class="home-bc-item__metro-item icon-metro__red">Лесная, Площадь Ленина</li>
-            </ul><a class="home-bc-item__tel text-18-dark" href="tel: 88125424820">8 (812) 542-48-20</a>
-            <p class="home-bc-item__places">Количество свободных помещений от 70 м² до 797 м²</p>
-            <ul class="home-bc-item__bills">
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Офисы</div>
-                <div class="home-bc-item-bill__param">от 450 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="26">13</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Склады</div>
-                <div class="home-bc-item-bill__param">от 1 050 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="50">4</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Производство</div>
-                <div class="home-bc-item-bill__param">от 950 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="26">10</div>
-              </li>
-              <li class="home-bc-item-bill">
-                <div class="home-bc-item-bill__name">Холодильные склады</div>
-                <div class="home-bc-item-bill__param">от 1 500 руб/м²</div>
-                <div class="home-bc-item-bill__amount" all="82">25</div>
-              </li>
-            </ul><a class="home-bc-item__btn" href="">Смотреть планировки помещений</a>
+          <div class="search-result-table">
+            <div class="table-card">
+              <div class="table-card__slider">
+                <div class="swiper-pagination table-card__swiper-pagination"></div>
+                <div class="swiper-wrapper"><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""></div>
+              </div><!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' --><a class="table-card__add-fav add-fav _added" href="javascript:void(0)"><svg class="icon-fav">
+<use xlink:href="#star"></use>
+</svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span></a>
+              <div class="table-card__content"><a class="table-card__name" href="javascript:void(0)">Офис №114003 этаж 4/7</a>
+                <div class="table-card__bc">БЦ «К-2» | класс В+</div>
+                <div class="table-card__row">
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Площадь</div>
+                    <div class="table-card__param">270 м<sup>2</sup></div>
+                  </div>
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Стоимость</div>
+                    <div class="table-card__param">36 323 ₽/мес.</div>
+                  </div>
+                </div>
+                <div class="table-card__address">
+                  <div class="text-14-grey">Адрес</div>
+                  <div class="text-18-dark">пр. Обуховской Обороны, д. 86, лит. М, Невский р-н</div>
+                </div>
+                <div class="table-card__metro">
+                  <div class="text-14-grey">Метро</div>
+                  <div class="text-18-dark">Московские ворота, Обводный канал, Фрунзенская</div>
+                </div>
+              </div><!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' --><a class="table-card__add-to-order" href="javascript:void(0)">+ Добавить к заявке</a>
+            </div>
+            <div class="table-card">
+              <div class="table-card__slider">
+                <div class="swiper-pagination table-card__swiper-pagination"></div>
+                <div class="swiper-wrapper"><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""></div>
+              </div><!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' --><a class="table-card__add-fav add-fav" href="javascript:void(0)"><svg class="icon-fav">
+<use xlink:href="#star"></use>
+</svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span></a>
+              <div class="table-card__content"><a class="table-card__name" href="javascript:void(0)">Офис №114003 этаж 4/7</a>
+                <div class="table-card__bc">БЦ «К-2» | класс В+</div>
+                <div class="table-card__row">
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Площадь</div>
+                    <div class="table-card__param">270 м<sup>2</sup></div>
+                  </div>
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Стоимость</div>
+                    <div class="table-card__param">36 323 ₽/мес.</div>
+                  </div>
+                </div>
+                <div class="table-card__address">
+                  <div class="text-14-grey">Адрес</div>
+                  <div class="text-18-dark">пр. Обуховской Обороны, д. 86, лит. М, Невский р-н</div>
+                </div>
+                <div class="table-card__metro">
+                  <div class="text-14-grey">Метро</div>
+                  <div class="text-18-dark">Московские ворота, Обводный канал, Фрунзенская</div>
+                </div>
+              </div><!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' --><a class="table-card__add-to-order _added" href="javascript:void(0)">Добавлено к заявке</a>
+            </div>
+            <div class="table-card">
+              <div class="table-card__slider">
+                <div class="swiper-pagination table-card__swiper-pagination"></div>
+                <div class="swiper-wrapper"><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""></div>
+              </div><!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' --><a class="table-card__add-fav add-fav" href="javascript:void(0)"><svg class="icon-fav">
+<use xlink:href="#star"></use>
+</svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span></a>
+              <div class="table-card__content"><a class="table-card__name" href="javascript:void(0)">Офис №114003 этаж 4/7</a>
+                <div class="table-card__bc">БЦ «К-2» | класс В+</div>
+                <div class="table-card__row">
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Площадь</div>
+                    <div class="table-card__param">270 м<sup>2</sup></div>
+                  </div>
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Стоимость</div>
+                    <div class="table-card__param">36 323 ₽/мес.</div>
+                  </div>
+                </div>
+                <div class="table-card__address">
+                  <div class="text-14-grey">Адрес</div>
+                  <div class="text-18-dark">пр. Обуховской Обороны, д. 86, лит. М, Невский р-н</div>
+                </div>
+                <div class="table-card__metro">
+                  <div class="text-14-grey">Метро</div>
+                  <div class="text-18-dark">Московские ворота, Обводный канал, Фрунзенская</div>
+                </div>
+              </div><!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' --><a class="table-card__add-to-order" href="javascript:void(0)">+ Добавить к заявке</a>
+            </div>
+            <div class="table-card">
+              <div class="table-card__slider">
+                <div class="swiper-pagination table-card__swiper-pagination"></div>
+                <div class="swiper-wrapper"><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""></div>
+              </div><!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' --><a class="table-card__add-fav add-fav" href="javascript:void(0)"><svg class="icon-fav">
+<use xlink:href="#star"></use>
+</svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span></a>
+              <div class="table-card__content"><a class="table-card__name" href="javascript:void(0)">Офис №114003 этаж 4/7</a>
+                <div class="table-card__bc">БЦ «К-2» | класс В+</div>
+                <div class="table-card__row">
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Площадь</div>
+                    <div class="table-card__param">270 м<sup>2</sup></div>
+                  </div>
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Стоимость</div>
+                    <div class="table-card__param">36 323 ₽/мес.</div>
+                  </div>
+                </div>
+                <div class="table-card__address">
+                  <div class="text-14-grey">Адрес</div>
+                  <div class="text-18-dark">пр. Обуховской Обороны, д. 86, лит. М, Невский р-н</div>
+                </div>
+                <div class="table-card__metro">
+                  <div class="text-14-grey">Метро</div>
+                  <div class="text-18-dark">Московские ворота, Обводный канал, Фрунзенская</div>
+                </div>
+              </div><!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' --><a class="table-card__add-to-order" href="javascript:void(0)">+ Добавить к заявке</a>
+            </div>
           </div>
         </div>
-      </section><!-- [ 1 ]  Метро группируются по линии (в примере ниже Моск. ворота и Фрунзенская принадлежат синей ветке, выводятся через запятую в одном теге с классом 'home-bc-item__metro-item'). Для управления цветом к тегу с классом .home-bc-item__metro-item добавляются классы: Красная - icon-metro__red; Синяя - icon-metro__blue; Зеленая - icon-metro__green; Фиолетовая - icon-metro__violet;Оранжевая - icon-metro__orange; Коричневая - icon-metro__brown; Серая - icon-metro__grey; -->
-<!-- [ 2 ]  Для количества свободных помещений. Необходимо в тег с классом ".home-bc-item-bill__amount" выводить в аттрибут "all" общее количество помещений, чтобы регулировать заполненность цветной плашки для свободных помещений (сейчас там рандомные цифры, чтобы ты наглядно посмотрел чокаво). После подгрузки кол-ва свободных помещений, js подсчитывает какие ширину и цвет задать этой плашечке --><!-- Слайдер с помещениями -->
+        <div class="search-result">
+          <div class="search-result__header">
+            <div class="search-result__title text-title">Складские</div>
+          </div>
+          <div class="search-result-table">
+            <div class="table-card">
+              <div class="table-card__slider">
+                <div class="swiper-pagination table-card__swiper-pagination"></div>
+                <div class="swiper-wrapper"><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""></div>
+              </div><!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' --><a class="table-card__add-fav add-fav" href="javascript:void(0)"><svg class="icon-fav">
+<use xlink:href="#star"></use>
+</svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span></a>
+              <div class="table-card__content"><a class="table-card__name" href="javascript:void(0)">Офис №114003 этаж 4/7</a>
+                <div class="table-card__bc">БЦ «К-2» | класс В+</div>
+                <div class="table-card__row">
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Площадь</div>
+                    <div class="table-card__param">270 м<sup>2</sup></div>
+                  </div>
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Стоимость</div>
+                    <div class="table-card__param">36 323 ₽/мес.</div>
+                  </div>
+                </div>
+                <div class="table-card__address">
+                  <div class="text-14-grey">Адрес</div>
+                  <div class="text-18-dark">пр. Обуховской Обороны, д. 86, лит. М, Невский р-н</div>
+                </div>
+                <div class="table-card__metro">
+                  <div class="text-14-grey">Метро</div>
+                  <div class="text-18-dark">Московские ворота, Обводный канал, Фрунзенская</div>
+                </div>
+              </div><!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' --><a class="table-card__add-to-order" href="javascript:void(0)">+ Добавить к заявке</a>
+            </div>
+          </div>
+        </div>
+        <div class="search-result">
+          <div class="search-result__header">
+            <div class="search-result__title text-title">Торговые</div>
+          </div>
+          <div class="search-result-table">
+            <div class="table-card">
+              <div class="table-card__slider">
+                <div class="swiper-pagination table-card__swiper-pagination"></div>
+                <div class="swiper-wrapper"><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""><img class="swiper-slide" src="./img/cards_list_example_img.jpg" alt=""></div>
+              </div><!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' --><a class="table-card__add-fav add-fav" href="javascript:void(0)"><svg class="icon-fav">
+<use xlink:href="#star"></use>
+</svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span></a>
+              <div class="table-card__content"><a class="table-card__name" href="javascript:void(0)">Офис №114003 этаж 4/7</a>
+                <div class="table-card__bc">БЦ «К-2» | класс В+</div>
+                <div class="table-card__row">
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Площадь</div>
+                    <div class="table-card__param">270 м<sup>2</sup></div>
+                  </div>
+                  <div class="table-card__col">
+                    <div class="text-14-grey">Стоимость</div>
+                    <div class="table-card__param">36 323 ₽/мес.</div>
+                  </div>
+                </div>
+                <div class="table-card__address">
+                  <div class="text-14-grey">Адрес</div>
+                  <div class="text-18-dark">пр. Обуховской Обороны, д. 86, лит. М, Невский р-н</div>
+                </div>
+                <div class="table-card__metro">
+                  <div class="text-14-grey">Метро</div>
+                  <div class="text-18-dark">Московские ворота, Обводный канал, Фрунзенская</div>
+                </div>
+              </div><!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' --><a class="table-card__add-to-order" href="javascript:void(0)">+ Добавить к заявке</a>
+            </div>
+          </div>
+        </div>
+      </section><!-- Слайдер с помещениями -->
       <section class="cards-list">
         <div class="cards-list__title page-title">Выгодные предложения по аренде</div>
         <div class="cards-list__slider">
@@ -406,8 +510,7 @@
 <use xlink:href="#star"></use>
 </svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span>
               </div>
-              <div class="cards-list-item__content">
-                <div class="cards-list-item__name">БЦ «К-2» | класс В+ БЦ «К-2» | класс В+</div>
+              <div class="cards-list-item__content"><a class="cards-list-item__name" href="javascript:void(0)">БЦ «К-2» | класс В+ БЦ «К-2» | класс В+</a>
                 <div class="cards-list-item__desc">Помещение №114003, складское, этаж 4/7</div>
                 <div class="cards-list-item__row">
                   <div class="cards-list-item__col">
@@ -438,8 +541,7 @@
 <use xlink:href="#star"></use>
 </svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span>
               </div>
-              <div class="cards-list-item__content">
-                <div class="cards-list-item__name">БЦ «К-2» | класс В+</div>
+              <div class="cards-list-item__content"><a class="cards-list-item__name" href="javascript:void(0)">БЦ «К-2» | класс В+</a>
                 <div class="cards-list-item__desc">Помещение №114003, складское, этаж 4/7</div>
                 <div class="cards-list-item__row">
                   <div class="cards-list-item__col">
@@ -470,8 +572,7 @@
 <use xlink:href="#star"></use>
 </svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span>
               </div>
-              <div class="cards-list-item__content">
-                <div class="cards-list-item__name">БЦ «К-2» | класс В+</div>
+              <div class="cards-list-item__content"><a class="cards-list-item__name" href="javascript:void(0)">БЦ «К-2» | класс В+</a>
                 <div class="cards-list-item__desc">Помещение №114003, складское, этаж 4/7</div>
                 <div class="cards-list-item__row">
                   <div class="cards-list-item__col">
@@ -502,8 +603,7 @@
 <use xlink:href="#star"></use>
 </svg><span class="add-fav__add">В избранное</span><span class="add-fav__rem">Удалить</span>
               </div>
-              <div class="cards-list-item__content">
-                <div class="cards-list-item__name">БЦ «К-2» | класс В+</div>
+              <div class="cards-list-item__content"><a class="cards-list-item__name" href="javascript:void(0)">БЦ «К-2» | класс В+</a>
                 <div class="cards-list-item__desc">Помещение №114003, складское, этаж 4/7</div>
                 <div class="cards-list-item__row">
                   <div class="cards-list-item__col">
@@ -527,69 +627,40 @@
             </div>
           </div>
         </div>
-      </section><!-- Программа лояльности -->
-      <section class="home-bullets">
-        <div class="home-bullets__title page-title">Программы лояльности для резидентов</div>
-        <ul class="home-bullets__list">
-                <li class="home-bullets__item">
-                  <div class="home-bullets__item-title text-title">Переезд в подарок!</div>
-                  <p class="home-bullets__item-text text-14-grey">«Квартал» предлагает недвижимость высокого класса в Московском районе Санкт-Петербурга. Прямая аренда от собственника включает в себя офисные, складские, производственные и торговые помещения под одной крышей</p>
-                </li>
-                <li class="home-bullets__item">
-                  <div class="home-bullets__item-title text-title">Скидка 10% на автомойку</div>
-                  <p class="home-bullets__item-text text-14-grey">«Квартал» предлагает недвижимость высокого класса в Московском районе Санкт-Петербурга. Прямая аренда от собственника включает в себя офисные, складские, производственные и торговые помещения под одной крышей</p>
-                </li>
-                <li class="home-bullets__item">
-                  <div class="home-bullets__item-title text-title">Производство + Склад всего от 500 руб/м²</div>
-                  <p class="home-bullets__item-text text-14-grey">«Квартал» предлагает недвижимость высокого класса в Московском районе Санкт-Петербурга. Прямая аренда от собственника включает в себя офисные, складские, производственные и торговые помещения под одной крышей</p>
-                </li>
-        </ul>
-      </section><!-- Все для развития бизнеса под одной крышей -->
-      <section class="home-info">
-        <div class="home-info__title page-title">Все для развития бизнеса под одной крышей</div>
-        <div class="home-info-bullets">
-          <div class="home-info-bullets__item">
-            <div class="home-info-bullets__item-title text-title">Четыре типа коммерческих площадей</div>
-            <ul class="home-info-bullets__item-list list">
-              <li>торговые;</li>
-              <li>офисные;</li>
-              <li>складские (в т.ч. холодильные);</li>
-              <li>производственные.</li>
+      </section><!-- Прямая аренда на выгоднях условиях -->
+      <section class="rent">
+        <div class="rent__title page-title">Прямая аренда на выгодных условиях</div>
+        <div class="rent__row">
+          <div class="rent__item">
+            <div class="rent__item-title text-title">Входит в арендную плату</div>
+            <ul class="rent__item-list list">
+              <li>Юридический адрес</li>
+              <li>НДС</li>
+              <li>Коммунальные услуги</li>
+              <li>Охрана помещений 24/7</li>
+              <li>Круглосуточное видеонаблюдение</li>
+              <li>Уборка помещений общего пользования</li>
+              <li>Почтовые ячейки</li>
+              <li>Услуги ресепшен по встрече гостей</li>
+              <li>Перепланировка помещений</li>
+              <li>Развозка от/до ст.м. Московские ворота</li>
             </ul>
           </div>
-          <div class="home-info-bullets__item">
-            <div class="home-info-bullets__item-title text-title">Стоимость аренды от собственника</div>
-            <ul class="home-info-bullets__item-list list">
-              <li>торговые — от 770 руб./м²;</li>
-              <li>офисные — от 700 руб./м²;</li>
-              <li>производственные — от 400 руб./м²;</li>
-              <li>складские — от 350 руб./м².</li>
+          <div class="rent__item">
+            <div class="rent__item-title text-title">Оплачивается отдельно</div>
+            <ul class="rent__item-list list">
+              <li>Вывоз мусора</li>
+              <li>Интернет / Телефония</li>
+              <li>Парковка</li>
+              <li>Электроэнергия</li>
             </ul>
           </div>
-          <div class="home-info-bullets__item">
-            <div class="home-info-bullets__item-title text-title">Что включает в себя договор аренды</div>
-            <ul class="home-info-bullets__item-list list">
-              <li>круглосуточную охрану;</li>
-              <li>уборку мест общественного пользования;</li>
-              <li>энергосберегающее оборудование;</li>
-              <li>вместительную парковку.</li>
-            </ul>
+          <div class="rent__item">
+            <div class="rent__item-title text-title">Особые условия</div>
+            <p class="rent__item-text text">Наши цены одни из самых низких в городе — 350 рублей за квадратный метр. В них включены: коммунальные услуги, ежедневная уборка, быстрый интернет, грузоподъемники, грузовые лифты и другие услуги.</p>
+            <div class="rent__item-docs"><a class="rent__item-doc" href="">Договор аренды (бизнес-центр «К-1»).doc</a><a class="rent__item-doc" href="">Договор аренды (бизнес-центр «К-2»).doc</a><a class="rent__item-doc" href="">Договор аренды (бизнес-центр «К-3»).doc</a></div>
+            <div class="rent__item-text text">Отдел аренды компании «Квартал»</div><a class="rent__item-tel text-title" href="tel:88127401902">8 (812) 740-19-02</a>
           </div>
-        </div>
-        <div class="home-info__container">
-          <div class="home-info__sub-title text-title">Стоимость конкретного помещения и другие вопросы можно уточнить по телефону <a href='tel: 88127401900'>8 (812) 740-19-00</a> </div>
-          <div class="home-info__sub-title text-title">Как сэкономить на аренде коммерческой недвижимости?</div>
-          <p class="home-info__text text-18-dark">На рынке коммерческой недвижимости Санкт-Петербурга вы найдёте самые различные предложения. Они объединены общим недостатком — сдаются через сеть посредников или агентства, что отражается на стоимости квадратного метра. Избежать этого можно обратившись к нам — все помещения компании «Квартал» находятся собственности.</p>
-          <p class="home-info__text text-18-dark">Прямая аренда коммерческих площадей от собственника имеет ряд неоспоримых преимуществ:</p>
-          <ul class="home-info__list list">
-            <li>гарантированно низкая стоимость;</li>
-            <li>выгодные условия сотрудничества;</li>
-            <li>высокая степень ответственности собственника.</li>
-          </ul>
-          <div class="home-info__sub-title text-title">Характеристики коммерческих площадей бизнес-центрах «Квартал»</div>
-          <p class="home-info__text text-18-dark">Помещения под офис находятся в одном из крупнейших бизнес-центров, имеют удобную планировку, видовые окна, хорошую звукоизоляцию и прочие достоинства, обеспечивающие успешную работу.</p>
-          <p class="home-info__text text-18-dark">Здания оснащены надежной системой лифтов и грузоподъёмников, имеют приятный интерьер, светлые и просторные помещения. В помещениях сделан качественный ремонт с использованием высококлассных современных материалов.</p>
-          <p class="home-info__text text-18-dark">Также мы предлагаем недвижимость под производство и складирование. Холодильные помещения отлично сконструированы и оборудованы по современным стандартам, мы предоставляем весь комплекс услуг по хранению и транспортировке продукции.</p>
         </div>
       </section><!-- Синяя проклятая форма -->
       <section class="form-gg">

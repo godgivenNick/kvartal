@@ -1,0 +1,86 @@
+.search-result
+    .search-result__header
+        .search-result__title.text-title Офисы с ремонтом
+
+        .search-result__output-ctrls.output-ctrls
+            <!-- Для текущего варианта выгрузки карточек добавляем класс '._current' для тега с классом '.search-result__ctrl'. -->
+            a(href="javascript:void(0)").search-result__ctrl.output-ctrl
+                <svg>
+                    <use xlink:href="#view_plitka"></use>
+                </svg>
+                span Плиткой
+            a(href="javascript:void(0)").search-result__ctrl.output-ctrl._current
+                <svg>
+                    <use xlink:href="#view_list"></use>
+                </svg>
+                span Списком
+
+    
+    .search-result-list
+        .search-result-list__head
+            .search-result-list__head-item(search-col='room') Помещение
+            a(href="javascript:void(0)" search-col='square').search-result-list__head-item._sort._current Площадь
+            a(href="javascript:void(0)" search-col='price').search-result-list__head-item._sort Стоимость
+
+        .search-result-list__body
+            .list-card
+                .list-card-content(search-col='room')
+                    .list-card__slider
+                        .swiper-pagination.list-card__swiper-pagination
+                        .swiper-wrapper
+                            img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                            img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                            img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide              
+                    .list-card-content__col
+                        a(href="javascript:void(0)").list-card__name Помещение №114003, этаж 4/7
+                        span.list-card__bc БЦ «К-1» | класс В+
+                        span.list-card__address пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                        ul.list-card__metro
+                            li.list-card__metro-item.icon-metro__blue Московские Ворота, Фрунзенская
+                            li.list-card__metro-item.icon-metro__red Лесная
+
+
+                span.list-card__sqr(search-col='square') 70 м²
+                .list-card__price(search-col='price')
+                    span.list-card__price-month 2 236 323 ₽/мес.
+                    span.list-card__price-sqr 450 ₽/м²
+
+                a(href="javascript:void(0)").list-card__add-to-order + Добавить к заявке
+
+
+    .search-result-table(style='display: none;')
+
+        .table-card
+            .table-card__slider
+                .swiper-pagination.table-card__swiper-pagination
+                .swiper-wrapper
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+
+            <!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' -->
+            a(href="javascript:void(0)").table-card__add-fav.add-fav._added
+                <svg class="icon-fav">
+                  <use xlink:href="#star"></use>
+                </svg>
+                span.add-fav__add В избранное
+                span.add-fav__rem Удалить
+            .table-card__content
+                a(href="javascript:void(0)").table-card__name Офис №114003 этаж 4/7
+                .table-card__bc БЦ «К-2» | класс В+
+                .table-card__row
+                    .table-card__col
+                        .text-14-grey Площадь
+                        .table-card__param 270 м<sup>2</sup>
+                    .table-card__col
+                        .text-14-grey Стоимость
+                        .table-card__param 36 323 ₽/мес.
+                .table-card__address
+                    .text-14-grey Адрес
+                    .text-18-dark пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                .table-card__metro
+                    .text-14-grey Метро
+                    .text-18-dark Московские ворота, Обводный канал, Фрунзенская
+            
+            <!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' -->
+            a(href="javascript:void(0)").table-card__add-to-order + Добавить к заявке

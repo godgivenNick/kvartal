@@ -1,0 +1,23 @@
+section.search
+    h1 По выбранным параметрам найдено 666 помещений
+
+    .search__sort.sort
+        span.sort__title Сортировать:
+        .sort__list
+            <!-- Для выбранного варианта сортировки добавляем к кнопке '.sort__btn' класс '._current' -->
+            a(href="javascript:void(0)").sort__btn._current По помещениям
+            a(href="javascript:void(0)").sort__btn По бизнес-центрам
+
+    include search_table.pug
+
+    //- include search_list.pug
+
+
+<!-- Слайдер с помещениями -->
+include ../../components/cards_list.pug
+
+<!-- Прямая аренда на выгоднях условиях -->
+include ../../components/rent.pug
+
+<!-- Синяя проклятая форма -->
+include ../../components/form_gg.pug

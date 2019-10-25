@@ -171,6 +171,8 @@ if(document.querySelector('.form-gg')){
 
             if(this.value == ''){
                 this.closest('.dd').querySelector('.dd__label').classList.remove('_focus');
+                this.closest('.dd').querySelector('.dd__arrow').classList.remove('_focus');
+
             }   
 
         },

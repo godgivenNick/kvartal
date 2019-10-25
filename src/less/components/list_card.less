@@ -1,0 +1,478 @@
+.search-result-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    &__head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        border-top: 2px solid var(--light_pink);
+        border-bottom: 2px solid var(--light_pink);
+        padding: 16px 0;
+    }
+
+
+    &__head-item {
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.46;
+        text-align: left;
+        color: #7a7a7a;
+
+
+        //  для сортировки
+        &._sort {
+            cursor: pointer;
+            transition: .2s ease-out;
+
+            position: relative;
+            padding-right: 16px;
+
+
+            &::before {
+                content: '';
+
+                border-color: #969ea8 transparent transparent transparent;
+                border-style: solid;
+                border-width: 5px 4px 0 4px;
+                height: 0;
+                width: 0;
+
+                position: absolute;
+                right: 0;
+                top: 8px;
+
+                transition: .2s ease-out;
+            }
+
+            &._current {
+
+                &::before {
+                    border-color: transparent transparent #969ea8 transparent;
+                    border-width: 0 4px 5px 4px;
+                }
+            }
+
+
+            &:hover,
+            &:active {
+                color: var(--cobalt_blue);
+
+                &:not(._current)::before {
+                    border-color: var(--cobalt_blue) transparent transparent transparent;
+                }
+                &._current::before {
+                    border-color: transparent transparent var(--cobalt_blue) transparent;
+                }
+            }
+        }
+
+
+        //  для ширины
+        &[search-col="square"]{
+            text-align: right;
+            width: 120px;
+            flex-shrink: 0;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        &[search-col="price"]{
+            text-align: right;
+            width: 150px;
+            flex-shrink: 0;
+        }
+
+        &[search-col='room']{
+            text-align: left;
+            width: calc(274px + 30px + 274px);
+        }
+    }
+}
+
+
+
+.search-result-list__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.list-card {
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+
+    padding: 16px 30px 16px 0;
+    border-bottom: 2px solid var(--light_pink);
+
+}
+
+.list-card-content {
+    display: flex;
+    align-items: flex-start;
+
+    &[search-col='room']{
+
+    }
+}
+
+
+
+//  Фотки
+.list-card__slider {
+    width: 274px;
+    height: 160px;
+    align-self: flex-start;
+
+    overflow: hidden;
+    position: relative;
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+        background-color: white;
+        opacity: .7;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        opacity: 1;
+    }
+}
+
+
+//  content
+.list-card-content__col {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 274px;
+    margin-left: 30px;
+}
+
+.list-card__name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.56;
+    text-align: left;
+    color: var(--dark);
+
+    margin-bottom: 8px;
+}
+
+.list-card__bc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+    text-align: left;
+    color: var(--dark);
+
+    margin-bottom: 24px;
+}
+
+.list-card__address {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.56;
+    text-align: left;
+    color: var(--dark);
+}
+
+
+.list-card__metro {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.71;
+        text-align: left;
+        color: var(--brownish_grey);
+
+        padding-left: 22px;
+
+        &::before {
+            left: 0;
+            top: 1px;
+        }
+    }
+}
+
+
+.list-card__sqr {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.56;
+    color: var(--dark);
+
+    text-align: right;
+    width: 120px;
+    flex-shrink: 0;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.list-card__price {
+    text-align: right;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-right: 30px;
+
+    &-month {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.56;
+        color: var(--dark);
+    }
+
+    &-sqr {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        color: var(--dark);
+    }
+}
+
+
+.list-card__add-to-order {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.56;
+    text-align: left;
+    color: var(--dark);
+    border-bottom: 2px solid var(--light_pink);
+
+    flex-shrink: 0;
+
+    align-self: center;
+    margin-left: auto;
+
+    transition: .2s ease-out;
+
+
+    &:hover {
+        color: var(--cobalt_blue);
+        border-color: var(--cobalt_blue);
+    }
+
+
+    &._added {
+        position: relative;
+        padding-left: 24px;
+        color: var(--cobalt_blue);
+        border-color: var(--cobalt_blue);
+
+        &::before {
+            content: url('../img/svg/check_blue.svg');
+
+            position: absolute;
+
+            width: 15px;
+            height: 12px;
+            left: 0;
+            top: 0;
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 1919.98px){
+
+    .list-card__slider {
+        width: 196px;
+        height: 120px;
+    }
+
+    .list-card-content__col {
+        width: 196px;
+        margin-left: 24px;
+    }
+
+    .search-result-list__head-item[search-col='room'] {
+        width: calc( 196px + 24px + 196px);
+    }
+
+    .search-result-list__head-item[search-col="square"] {
+        margin-left: 24px;
+        margin-right: 24px;
+        width: 90px;
+
+    }
+
+    .list-card__sqr {
+        margin-left: 24px;
+        margin-right: 24px;
+        width: 90px;
+    }
+
+    .list-card__name {
+        font-size: 14px;
+    }
+
+    .list-card__bc {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .list-card__address {
+        font-size: 14px;
+    }
+
+    .list-card__metro-item {
+        font-size: 12px;
+    }
+
+    .list-card__price {
+        margin-right: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 1366px){
+
+    .list-card {
+        padding-right: 0;
+    }
+
+}
+
+@media only screen and (max-width: 1280px){
+
+    .list-card {
+        position: relative;
+    }
+
+    .list-card__slider {
+        width: 152px;
+        height: 93px;
+    }
+
+    .list-card-content__col {
+        width: 152px;
+        margin-left: 16px;
+    }
+
+    .search-result-list__head-item[search-col='room'] {
+        width: calc( 152px + 16px + 152px);
+    }
+
+    .search-result-list__head-item[search-col="square"] {
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 70px;
+    }
+
+    .list-card__sqr {
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 70px;
+        font-size: 16px;
+    }
+
+    .list-card__price,
+    .search-result-list__head-item[search-col="price"] {
+        width: 130px;
+        flex-shrink: 1;
+    }
+
+    .list-card__price-month {
+        font-size: 16px;
+    }
+
+    .list-card__address {
+        font-size: 12px;
+    }
+
+    .list-card__add-to-order {
+        font-size: 14px;
+        position: absolute;
+        right: 0;
+        align-self: flex-end;
+    }
+}
+
+
+@media only screen and (max-width: 640px){
+
+    .search-result-list__head {
+        display: none;
+    }
+
+
+    .list-card {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:first-of-type {
+            border-top: 2px solid var(--light_pink);
+        }
+    }
+
+    .list-card-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .list-card__slider {
+        width: 100%;
+        height: auto;
+    }
+
+    .list-card-content__col {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+        padding: 0 16px;
+    }
+
+    .list-card__sqr {
+        margin: 0;
+        margin-bottom: 16px;
+        margin-top: 16px;
+        align-self: center;
+    }
+
+    .list-card__price {
+        margin: 0;
+        margin-bottom: 16px;
+        align-self: center;
+
+    }
+
+    .list-card__add-to-order {
+        position: static;
+        align-self: center;
+        margin: 0;
+    }
+}

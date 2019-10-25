@@ -57,4 +57,28 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
+    //  Результат поиска и Избранное в плиточной версии
+    if(document.querySelector('.table-card')){
+
+
+        //  слайдер фоток в карточках
+        var table_card_img_slider = new Swiper('.table-card__slider', {
+    
+            init: true,
+            slidesPerView: 1,
+            speed: 500,
+            spaceBetween: 30,
+        
+            pagination: {
+                type: 'bullets',
+                el: '.swiper-pagination.table-card__swiper-pagination',
+            },
+        
+        });
+
+
+    }
+
+
+
 });
