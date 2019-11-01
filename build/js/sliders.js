@@ -76,9 +76,34 @@ document.addEventListener('DOMContentLoaded', function(){
         
         });
 
-
     }
 
+
+
+    //  Галерея для стр. Объект и Помещение
+    if(document.querySelector('.object-promo__galery')){
+
+
+        var object_promo_galery_slider = new Swiper('.object-promo__galery', {
+    
+            init: true,
+            slidesPerView: 1,
+            speed: 500,
+            spaceBetween: 30,
+        
+            pagination: {
+                type: 'bullets',
+                el: '.swiper-pagination.object-promo__pagination',
+            },
+
+            navigation: {
+                nextEl: '.object-promo__next',
+                prevEl: '.object-promo__prev',
+            },
+        
+        });
+
+    }
 
 
 });

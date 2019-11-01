@@ -1,0 +1,36 @@
+section.object-room-main
+    h2 Помещение на плане 5-го этажа
+
+    .object-room-main__container
+        .object-room-main__left
+            h4.object-room-main__sub-title Особенности
+            p.object-room-main__text Офис находится в левом крыле здания, имеет 2 кабинета и собственный санузел. Окна выходят на ул. Ново-Рыбинская, откуда открывается отличный вид на город. Помещение не требует ремонта и полностью готово к аренде.
+
+            h4.object-room-main__sub-title На этаже находятся
+            ul.object-room-main__list.list
+                li 2 грузовых лифта
+                li 2 пассжирских лифта
+                li Туалеты
+                li Переговорная комната
+                li Фитнес-клуб
+                li Кофейные автоматы
+
+            a(href="javascript:void(0)").object-room-main__link Посмотреть полный план здания
+            a(href="javascript:void(0)").object-room-main__link Добавить помещение к заявке
+
+        .object-room-main__right
+            <!-- Контейнер для планировки -->
+            .object-room-main-plan
+
+            form(action="").object-main-form
+                p.object-main-form__title Оставьте заявку, чтобы посмотреть это помещение в живую
+                .object-main-form__row
+                    input(type="text" placeholder='Телефон для связи')
+                    button(type='submit').btn.btn--sun Записаться на просмотр
+                p.object-main-form__text-min Подтвердим по телефону. Нажимая на кнопку «Записаться на просмотр» вы соглашаетесь на обработку персональных данных согласно <a href='javascript:void(0)'>условиям</a>.
+
+            <!-- Так выглядит блок-форма после успешной отправки -->
+            form(action="").object-main-form
+                p.object-main-form__title Заявка на просмотр помещения №11890 отправлена!
+                p.object-main-form__text Мы свяжемся с вами в течение 30 минут для согласования времени просмотра
+                a(href="javascript:void(0)").object-main-form__cancel-btn Отменить просмотр

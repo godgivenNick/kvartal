@@ -151,6 +151,41 @@ if(document.querySelector('.home-bc')){
 
 
 
+//  Тумблеры на стр. Контакты
+if(document.querySelector('.contacts-map')){
+
+    var items = Array.from(document.querySelectorAll('.contacts-map-item'));
+
+    //  первый сразу отображаем
+    items[0].classList.add('_show');
+
+    items.forEach(function(each){
+
+        each.addEventListener('click', function(e){
+
+            if(e.target.closest('.contacts-map-item__heading')){
+
+                if(!each.classList.contains('_show')){
+
+                    items.forEach(function(each){
+                        each.classList.remove('_show');
+                    });
+
+                    each.classList.add('_show');
+
+                } else {
+                    each.classList.remove('_show');
+                }
+
+            }
+        });
+    });
+}
+
+
+
+
+
 //  Datepicker для синей формы
 if(document.querySelector('.form-gg')){
 

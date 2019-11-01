@@ -1,0 +1,32 @@
+section.service-cam
+
+    .service-cam__sort.sort
+        span.sort__title Бизнес-центр:
+        .sort__list
+            <!-- Для выбранного варианта сортировки добавляем к кнопке '.sort__btn' класс '._current' -->
+            a(href="javascript:void(0)").sort__btn._current «К-1», Ново-Рыбинская
+            a(href="javascript:void(0)").sort__btn «К-2», Обуховской обороны
+            a(href="javascript:void(0)").sort__btn «К-3», Арсенальная
+
+    h2 Веб-камеры
+
+
+    .service-cam__col
+        .service-cam__ctrls
+            a(href="javascript:void(0)" cam-id='1').service-cam__ctrl._current Парковка
+            a(href="javascript:void(0)" cam-id='2').service-cam__ctrl Ресепшн
+            a(href="javascript:void(0)" cam-id='3').service-cam__ctrl Бистро
+            a(href="javascript:void(0)" cam-id='4').service-cam__ctrl Лифты
+        .service-cam__container
+
+            .service-cam-item(cam-id='1')._show
+                img(src="./img/service/cam_example.jpg", alt="").service-cam-item__container
+
+            .service-cam-item(cam-id='2')
+                img(src="./img/service/cam_example.jpg", alt="").service-cam-item__container
+
+            .service-cam-item(cam-id='3')
+                img(src="./img/service/cam_example.jpg", alt="").service-cam-item__container
+
+            .service-cam-item(cam-id='4')
+                img(src="./img/service/cam_example.jpg", alt="").service-cam-item__container
