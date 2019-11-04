@@ -184,6 +184,73 @@ if(document.querySelector('.contacts-map')){
 
 
 
+//  Тумблеры для стр. Сервисы
+if(document.querySelector('.service-cam')){
+
+    Array.from(document.querySelectorAll('.service-cam__ctrl')).forEach(function(each){
+        each.addEventListener('click', function(e){
+            var each_id = each.getAttribute('cam-id');
+            document.querySelector('.service-cam__ctrl._current').classList.remove('_current');
+            each.classList.add('_current');
+
+            document.querySelector('.service-cam-item._show').classList.remove('_show');
+            document.querySelector('.service-cam-item[cam-id="' + each_id + '"]').classList.add('_show');
+        });
+    });
+
+}
+
+
+
+
+
+
+//  Раскрывающиеся информашки ( faq вопрос-ответ )
+if(document.querySelector('.dd-faq')){
+
+    Array.from(document.querySelectorAll('.dd-faq')).forEach(function(each){
+
+        //  1
+        var each_content = each.querySelector('.dd-faq__content');
+        var each_content_height = 0;
+        var each_content_pabot = 0;
+        var each_header = each.querySelector('.dd-faq__header');
+
+        each_content_height = window.getComputedStyle(each_content).height;
+        each_content_pabot = window.getComputedStyle(each_content).paddingBottom;
+        if(!each.classList.contains('_show')){
+            each_content.style.height = 0;
+            each_content.style.paddingBottom = 0;
+        }
+
+
+        each.addEventListener('click', function(e){
+
+
+            if(e.target.closest('.dd-faq__header')){
+
+                if(!each.classList.contains('_show')){
+                    each_content.style.height = each_content_height;
+                    each_content.style.paddingBottom = each_content_pabot;
+                    each.classList.add('_show');
+                } else {
+                    each_content.style.paddingBottom = 0;
+                    each_content.style.height = 0;
+                    each.classList.remove('_show');
+                }
+
+            }
+
+
+        });
+
+    });
+
+}
+
+
+
+
 
 
 //  Datepicker для синей формы

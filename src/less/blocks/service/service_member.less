@@ -1,0 +1,134 @@
+.service-member {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 140px;
+
+
+    &__title {
+        max-width: 882px;
+
+        margin-top: 110px;
+        margin-bottom: 110px;
+    }
+
+
+    &__container {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+
+        flex-wrap: wrap;
+    }
+}
+
+
+.service-member-item {
+    width: calc(100% / 3 - 16px);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 40px;
+    margin-bottom: 24px;
+    &:nth-child(3n+2){
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    border-radius: 10px;
+    border: solid 1px var(--royal_blue);
+    background-color: rgba(0, 6, 105, 0);
+
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+
+    &__img {
+        width: 100%;
+        max-width: 66.67%;
+        height: auto;
+
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: 8px;
+    }
+
+
+    &__sub-title {
+        margin-bottom: 8px;
+    }
+
+
+    &__text {
+        margin-bottom: 16px;
+    }
+
+
+    &__text-link {
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        cursor: pointer;
+        transition: .25s ease-out;
+
+        &:hover,
+        &:active {
+            text-decoration-color: var(--cobalt_blue);
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1919.98px){
+	.service-member-item {
+
+        padding: 24px 24px;
+
+    }
+}
+
+
+@media only screen and (max-width: 1366px){
+
+    .service-member {
+        margin-bottom: 110px;
+
+        &__title {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1280px){
+	.service-member-item {
+        padding: 24px 16px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .service-member__container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+	.service-member-item {
+        width: 100%;
+        max-width: 426px;
+    }
+
+    .service-member-item:nth-child(3n+2) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

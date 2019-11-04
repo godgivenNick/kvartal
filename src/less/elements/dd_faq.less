@@ -1,0 +1,136 @@
+.dd-faq {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 2px solid var(--light_pink);
+
+    overflow: hidden;
+    position: relative;
+    &::before {
+        content: '';
+
+        position: absolute;
+        right: 100px;
+        top: 60px;
+
+        background-image: url('../img/svg/plus.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+
+        width: 16px;
+        height: 16px;
+
+        // transition: .25s ease-out;
+    }
+
+
+
+
+    &__header {
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.43;
+        text-align: left;
+        color: var(--brownish_grey);
+        background: white;
+
+        padding: 48px 0;
+        padding-right: 140px;
+
+        cursor: pointer;
+        transition: .25s ease-out;
+        &:hover,
+        &:active {
+            color: var(--dark);
+        }
+    }
+
+
+    &__content {
+        width: 100%;
+        max-width: 882px;
+        display: flex;
+        flex-direction: column;
+
+        transition: .25s ease-out;
+        padding-bottom: 48px;
+
+    }
+
+
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.56;
+        text-align: left;
+        color: var(--dark);
+    }
+
+
+    &._show {
+
+        .dd-faq__header {
+            color: var(--dark);
+        }
+
+        &::before {
+            background-image: url('../img/svg/x_mark.svg');
+        }
+
+        .dd-faq__content {
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1366px){
+
+}
+
+
+@media only screen and (max-width: 1280px){
+    
+	.dd-faq__header {
+        padding-right: 48px;
+    }
+
+
+    .dd-faq {
+        &::before {
+            right: 16px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+
+	.dd-faq__header {
+        padding: 24px 0;
+        padding-right: 48px;
+        font-size: 22px;
+    }
+
+    .dd-faq {
+        &::before {
+            top: 32px;
+        }
+    }
+
+
+    .dd-faq__text {
+        font-size: 14px;
+    }
+
+    .dd-faq__content {
+        padding-bottom: 24px;
+    }
+}

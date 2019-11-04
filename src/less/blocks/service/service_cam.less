@@ -1,7 +1,7 @@
 .service {
     width: 100%;
 
-    padding: 18px;
+    padding-top: 18px;
     display: flex;
     flex-direction: column;
 
@@ -19,6 +19,8 @@
 
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 180px;
 
     h2 {
         .page-title;
@@ -42,7 +44,6 @@
 
 
     &__ctrl {
-        // width: 80px;
         padding: 0 16px;
         height: 40px;
         display: flex;
@@ -115,8 +116,67 @@
 
     .service {
         h1 {
+            font-size: 35px;
             margin-bottom: 140px;
         }
     }
 
+
+    .service-cam {
+        h2 {
+            font-size: 35px;
+            margin-bottom: 80px;
+            margin-top: 80px;
+        }
+
+        margin-bottom: 140px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1280px){
+
+    .service-cam {
+        margin-bottom: 110px;
+    }
+
+    .service-cam-item__container {
+        height: 422px;
+    }
+
+
+    .service h1 {
+        margin-bottom: 110px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1024px){
+
+    .service h1 {
+        margin-bottom: 80px;
+    }
+
+    .service-cam {
+        margin-bottom: 80px;
+    }
+
+    .service-cam-item__container {
+        height: 336px;
+    }
+
+    .service-cam__ctrls {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media only screen and (max-width: 640px){
+
+    .service-cam-item__container {
+        height: 248px;
+    }
 }
