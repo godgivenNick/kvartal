@@ -283,5 +283,40 @@ if(document.querySelector('.form-gg')){
 }
 
 
+
+//  Datepicker для серой формы
+if(document.querySelector('.form-gg-grey')){
+
+    var form_gg_grey_datepickers = Array.from(document.querySelectorAll('.form-gg-grey .dd__date input'));
+    form_gg_grey_datepickers.forEach(function(each){
+
+        each.addEventListener('focus', function(e){
+            e.target.closest('.dd').querySelector('.dd__label').classList.add('_focus');
+            e.target.closest('.dd').querySelector('.dd__arrow').classList.add('_focus');
+        });
+
+    })
+
+    $( ".form-gg-grey .dd__date input" ).datepicker({
+
+        dateFormat : 'dd.mm.yy',
+        dayNames: [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" ],
+        dayNamesMin : [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+        monthNames : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+
+        onClose: function(){
+
+            if(this.value == ''){
+                this.closest('.dd').querySelector('.dd__label').classList.remove('_focus');
+                this.closest('.dd').querySelector('.dd__arrow').classList.remove('_focus');
+
+            }   
+
+        },
+
+    });
+}
+
+
 //  END
 });

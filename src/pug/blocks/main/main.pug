@@ -16,14 +16,37 @@ main.main
 	//- <!-- стр. "Результат поиска" -->
 	//- include ../search/search.pug
 
+
+	//- <!-- стр. "Добавлено в избранное" - 'ПЛИТКОЙ', 'По Помещениям' -->
+	//- include ../fav/fav_room_table.pug
+
+	//- <!-- стр. "Добавлено в избранное" - 'СПИСКОМ', 'По Помещениям' -->
+	//- include ../fav/fav_room_list.pug
+
+
+	//- <!-- стр. "Добавлено в избранное" - 'ПЛИТКОЙ', 'По бизнес-центрам' -->
+	//- include ../fav/fav_bc_table.pug
+
+	//- <!-- стр. "Добавлено в избранное" - 'СПИСКОМ', 'По бизнес-центрам' -->
+	//- include ../fav/fav_bc_list.pug
+
+
+
+	<!-- стр. "Добавлено к заявке" -->
+	include ../order/order.pug
+
+
+	//- <!-- стр. "Удалили из избранного/заявки". !!! Не забыть накинуть класс '_current' для пункта меню 'li.side-nav__item' если это избранное / в заявке -->
+	//- include ../fav_empty/fav_empty.pug
+
 	//- <!-- стр. "Отзывы" -->
 	//- include ../reviews/reviews.pug
 
 	//- <!-- стр. "404" -->
 	//- include ../404/404.pug
 
-	<!-- стр. "Сервисы" -->
-	include ../service/service.pug
+	//- <!-- стр. "Сервисы" -->
+	//- include ../service/service.pug
 
 	//- <!-- стр. "О Компании" -->
 	//- include ../about/about.pug

@@ -1,5 +1,5 @@
 section.search
-    h1 По выбранным параметрам найдено 666 помещений
+    h1 Вы добавили 666 помещений в избранное
 
     .search__sort.sort
         span.sort__title Сортировать:
@@ -7,13 +7,15 @@ section.search
             <!-- Для выбранного варианта сортировки добавляем к кнопке '.sort__btn' класс '._current' -->
             a(href="javascript:void(0)").sort__btn._current По помещениям
             a(href="javascript:void(0)").sort__btn По бизнес-центрам
+            a(href="javascript:void(0)").sort__btn Добавлено к заявке <span>(13)</span>
+            a(href="javascript:void(0)").sort__btn-clear Очистить
 
-    <!-- показывать Плиткой -->
-    include search_table.pug
+    <!-- показывать Списком -->
+    include ../search/search_list.pug
 
-
-    //- <!-- показывать Списком -->
-    //- include search_list.pug
+    <!-- Форма "добавить избранные помещения к заявке -->
+    include ../../components/form_room.pug
+    +form_room
 
 
 <!-- Слайдер с помещениями -->

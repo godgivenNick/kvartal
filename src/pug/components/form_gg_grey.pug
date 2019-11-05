@@ -1,0 +1,31 @@
+section.form-gg-grey
+    .form-gg-grey__title.text-title Оставьте заявку, чтобы посмотреть помещения в БЦ «К-1»
+
+    form(action="").form-gg-grey__form
+        .dd-row
+            .dd.dd__date
+                .dd__label Дата
+                .dd__arrow
+                    span
+                input(type="text" autocomplete='off').dd__input
+
+            .dd.dd__time
+                .dd__label Время
+                select.dd__select( style='width: 100%;')
+                    option(value="0" disabled='disabled') Не выбрано
+                    option(value="1") 10:00 - 11:00
+                    option(value="2") 11:00 - 12:00
+                    option(value="3") 12:00 - 13:00
+            .dd.dd__tel
+                input(type="text" placeholder='Телефон для связи').dd__input
+
+        button.form-gg-grey__btn.btn.btn--sun Записаться на просмотр
+
+    p.form-gg-grey__text-min Подтвердим по телефону. Нажимая на кнопку «Записаться на просмотр» вы соглашаетесь на обработку персональных данных согласно <a href='javascript:void(0)'>условиям</a>.
+
+
+section.form-gg-grey
+    .form-gg-grey__title.text-title Заявка на просмотр помещений в БЦ «К-3» отправлена!
+    p.form-gg-grey__text Мы свяжемся с вами в течение 30 минут для согласования времени просмотра
+
+    a(href="javascript:void(0)").form-gg-grey__cancel-btn Отменить просмотр

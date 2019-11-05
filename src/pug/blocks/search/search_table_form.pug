@@ -1,0 +1,273 @@
+.search-result
+    .search-result__header
+        .search-result__bc
+            .search-result__bc-row
+                h4.search-result__bc-name Бизнес-центр «К-1»
+                span.search-result__bc-class Класс В+
+            p.search-result__bc-address Ново-Рыбинская 19/21, Московский р-н
+            
+
+        .search-result__output-ctrls.output-ctrls
+            <!-- Для текущего варианта выгрузки карточек добавляем класс '._current' для тега с классом '.search-result__ctrl'. -->
+            a(href="javascript:void(0)").search-result__ctrl.output-ctrl._current
+                <svg>
+                    <use xlink:href="#view_plitka"></use>
+                </svg>
+                span Плиткой
+            a(href="javascript:void(0)").search-result__ctrl.output-ctrl
+                <svg>
+                    <use xlink:href="#view_list"></use>
+                </svg>
+                span Списком
+
+    .search-result-table
+
+        .table-card
+            .table-card__slider
+                .swiper-pagination.table-card__swiper-pagination
+                .swiper-wrapper
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+
+            <!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' -->
+            a(href="javascript:void(0)").table-card__add-fav.add-fav._added
+                <svg class="icon-fav">
+                  <use xlink:href="#star"></use>
+                </svg>
+                span.add-fav__add В избранное
+                span.add-fav__rem Удалить
+            .table-card__content
+                a(href="javascript:void(0)").table-card__name Офис №114003 этаж 4/7
+                .table-card__bc БЦ «К-2» | класс В+
+                .table-card__row
+                    .table-card__col
+                        .text-14-grey Площадь
+                        .table-card__param 270 м<sup>2</sup>
+                    .table-card__col
+                        .text-14-grey Стоимость
+                        .table-card__param 36 323 ₽/мес.
+                .table-card__address
+                    .text-14-grey Адрес
+                    .text-18-dark пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                .table-card__metro
+                    .text-14-grey Метро
+                    .text-18-dark Московские ворота, Обводный канал, Фрунзенская
+            
+            <!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' -->
+            a(href="javascript:void(0)").table-card__add-to-order + Добавить к заявке
+
+        .table-card
+            .table-card__slider
+                .swiper-pagination.table-card__swiper-pagination
+                .swiper-wrapper
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+
+            <!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' -->
+            a(href="javascript:void(0)").table-card__add-fav.add-fav
+                <svg class="icon-fav">
+                  <use xlink:href="#star"></use>
+                </svg>
+                span.add-fav__add В избранное
+                span.add-fav__rem Удалить
+            .table-card__content
+                a(href="javascript:void(0)").table-card__name Офис №114003 этаж 4/7
+                .table-card__bc БЦ «К-2» | класс В+
+                .table-card__row
+                    .table-card__col
+                        .text-14-grey Площадь
+                        .table-card__param 270 м<sup>2</sup>
+                    .table-card__col
+                        .text-14-grey Стоимость
+                        .table-card__param 36 323 ₽/мес.
+                .table-card__address
+                    .text-14-grey Адрес
+                    .text-18-dark пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                .table-card__metro
+                    .text-14-grey Метро
+                    .text-18-dark Московские ворота, Обводный канал, Фрунзенская
+            
+            <!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' -->
+            a(href="javascript:void(0)").table-card__add-to-order._added Добавлено к заявке
+
+
+        .table-card
+            .table-card__slider
+                .swiper-pagination.table-card__swiper-pagination
+                .swiper-wrapper
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+
+            <!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' -->
+            a(href="javascript:void(0)").table-card__add-fav.add-fav
+                <svg class="icon-fav">
+                  <use xlink:href="#star"></use>
+                </svg>
+                span.add-fav__add В избранное
+                span.add-fav__rem Удалить
+            .table-card__content
+                a(href="javascript:void(0)").table-card__name Офис №114003 этаж 4/7
+                .table-card__bc БЦ «К-2» | класс В+
+                .table-card__row
+                    .table-card__col
+                        .text-14-grey Площадь
+                        .table-card__param 270 м<sup>2</sup>
+                    .table-card__col
+                        .text-14-grey Стоимость
+                        .table-card__param 36 323 ₽/мес.
+                .table-card__address
+                    .text-14-grey Адрес
+                    .text-18-dark пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                .table-card__metro
+                    .text-14-grey Метро
+                    .text-18-dark Московские ворота, Обводный канал, Фрунзенская
+            
+            <!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' -->
+            a(href="javascript:void(0)").table-card__add-to-order + Добавить к заявке
+
+
+        .table-card
+            .table-card__slider
+                .swiper-pagination.table-card__swiper-pagination
+                .swiper-wrapper
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+
+            <!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' -->
+            a(href="javascript:void(0)").table-card__add-fav.add-fav
+                <svg class="icon-fav">
+                  <use xlink:href="#star"></use>
+                </svg>
+                span.add-fav__add В избранное
+                span.add-fav__rem Удалить
+            .table-card__content
+                a(href="javascript:void(0)").table-card__name Офис №114003 этаж 4/7
+                .table-card__bc БЦ «К-2» | класс В+
+                .table-card__row
+                    .table-card__col
+                        .text-14-grey Площадь
+                        .table-card__param 270 м<sup>2</sup>
+                    .table-card__col
+                        .text-14-grey Стоимость
+                        .table-card__param 36 323 ₽/мес.
+                .table-card__address
+                    .text-14-grey Адрес
+                    .text-18-dark пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                .table-card__metro
+                    .text-14-grey Метро
+                    .text-18-dark Московские ворота, Обводный канал, Фрунзенская
+            
+            <!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' -->
+            a(href="javascript:void(0)").table-card__add-to-order + Добавить к заявке
+
+
+<!-- Форма "добавить избранные помещения к заявке -->
+include ../../components/form_room.pug
++form_bc
+
+
+.search-result
+    .search-result__header
+        .search-result__bc
+            .search-result__bc-row
+                h4.search-result__bc-name Бизнес-центр «К-2»
+                span.search-result__bc-class Класс В+
+            p.search-result__bc-address Ново-Рыбинская 19/21, Московский р-н
+
+    .search-result-table
+
+        .table-card
+            .table-card__slider
+                .swiper-pagination.table-card__swiper-pagination
+                .swiper-wrapper
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+
+            <!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' -->
+            a(href="javascript:void(0)").table-card__add-fav.add-fav
+                <svg class="icon-fav">
+                  <use xlink:href="#star"></use>
+                </svg>
+                span.add-fav__add В избранное
+                span.add-fav__rem Удалить
+            .table-card__content
+                a(href="javascript:void(0)").table-card__name Офис №114003 этаж 4/7
+                .table-card__bc БЦ «К-2» | класс В+
+                .table-card__row
+                    .table-card__col
+                        .text-14-grey Площадь
+                        .table-card__param 270 м<sup>2</sup>
+                    .table-card__col
+                        .text-14-grey Стоимость
+                        .table-card__param 36 323 ₽/мес.
+                .table-card__address
+                    .text-14-grey Адрес
+                    .text-18-dark пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                .table-card__metro
+                    .text-14-grey Метро
+                    .text-18-dark Московские ворота, Обводный канал, Фрунзенская
+            
+            <!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' -->
+            a(href="javascript:void(0)").table-card__add-to-order + Добавить к заявке
+
+
+<!-- Форма "добавить избранные помещения к заявке -->
+include ../../components/form_room.pug
++form_bc
+
+
+.search-result
+    .search-result__header
+        .search-result__bc
+            .search-result__bc-row
+                h4.search-result__bc-name Бизнес-центр «К-3»
+                span.search-result__bc-class Класс В+
+            p.search-result__bc-address Ново-Рыбинская 19/21, Московский р-н
+
+    .search-result-table
+
+        .table-card
+            .table-card__slider
+                .swiper-pagination.table-card__swiper-pagination
+                .swiper-wrapper
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+                    img(src="./img/cards_list_example_img.jpg", alt="").swiper-slide
+
+            <!-- Когда добавили в избранное, добавляем к '.table-card__add-fav' класс '._added', который заменит цвет на желтый, а так же изменит текст с 'В избранное' на 'Удалить' -->
+            a(href="javascript:void(0)").table-card__add-fav.add-fav
+                <svg class="icon-fav">
+                  <use xlink:href="#star"></use>
+                </svg>
+                span.add-fav__add В избранное
+                span.add-fav__rem Удалить
+            .table-card__content
+                a(href="javascript:void(0)").table-card__name Офис №114003 этаж 4/7
+                .table-card__bc БЦ «К-2» | класс В+
+                .table-card__row
+                    .table-card__col
+                        .text-14-grey Площадь
+                        .table-card__param 270 м<sup>2</sup>
+                    .table-card__col
+                        .text-14-grey Стоимость
+                        .table-card__param 36 323 ₽/мес.
+                .table-card__address
+                    .text-14-grey Адрес
+                    .text-18-dark пр. Обуховской Обороны, д. 86, лит. М, Невский р-н
+                .table-card__metro
+                    .text-14-grey Метро
+                    .text-18-dark Московские ворота, Обводный канал, Фрунзенская
+            
+            <!-- По дефолту: текст в кнопке '+ Добавить к заявке', когда кликнули и добавили к заказку: текст в кнопке 'Добавлено к заявке', так же добавляем класс '._added' -->
+            a(href="javascript:void(0)").table-card__add-to-order + Добавить к заявке
+
+
+
+<!-- Форма "добавить избранные помещения к заявке -->
+include ../../components/form_room.pug
++form_bc

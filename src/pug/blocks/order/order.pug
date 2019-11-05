@@ -1,0 +1,22 @@
+section.order
+    h1 Вы добавили к заявке 666 помещений
+
+    .order__sort.sort
+        span.sort__title Сортировать:
+        .sort__list
+            <!-- Для выбранного варианта сортировки добавляем к кнопке '.sort__btn' класс '._current' -->
+            a(href="javascript:void(0)").sort__btn По помещениям
+            a(href="javascript:void(0)").sort__btn По бизнес-центрам
+            a(href="javascript:void(0)").sort__btn._current Добавлено к заявке <span>(13)</span>
+            a(href="javascript:void(0)").sort__btn-clear Очистить
+
+    <!-- Список добавленных помещений по бизнес-центрам + форма после каждого -->
+    include order_list.pug
+
+
+<!-- Как заказать аренду -->
+include order_how.pug
+
+
+<!-- Прямая аренда на выгоднях условиях -->
+include ../../components/rent.pug

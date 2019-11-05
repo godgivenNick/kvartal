@@ -95,6 +95,15 @@
 }
 
 
+.list-card__add-fav {
+    position: absolute;
+
+    right: 8px;
+    top: 8px;
+    z-index: 2;
+}
+
+
 
 .search-result-list__body {
     width: 100%;
@@ -474,5 +483,48 @@
         position: static;
         align-self: center;
         margin: 0;
+    }
+
+
+    .list-card__name {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .list-card__bc {
+        // .cards-list-item__desc;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.71;
+        text-align: left;
+        color: var(--dark);
+        margin-bottom: 16px;
+
+    }
+
+    .list-card__address {
+        .text;
+    }
+
+    .list-card {
+        max-width: 424px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        border: solid 1px var(--light_pink);
+        background-color: var(--white);  
+
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 24px;
+    }
+
+    .list-card-content__col {
+        padding: 0;
+    }
+
+    .list-card__price-sqr {
+        display: none;
     }
 }

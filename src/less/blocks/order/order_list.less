@@ -1,0 +1,371 @@
+.order-item {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 88px;
+}
+
+.order-item__bc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom: 32px;
+
+
+    &-row {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+
+        margin-bottom: 8px;
+    }
+
+
+    &-name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.43;
+        text-align: left;
+        color: var(--dark);
+
+        margin-right: 8px;
+    }
+
+
+    &-class {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 2;
+        text-align: left;
+        color: var(--brownish_grey);
+    }
+
+
+    &-address {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        text-align: left;
+        color: var(--dark);
+    }
+}
+
+
+.order-item-heading {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 2px solid var(--light_pink);
+    border-bottom: 2px solid var(--light_pink);
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 24px;
+
+
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.46;
+        text-align: left;
+        color: #7a7a7a;
+
+        a,button {
+            transition: .25s ease-out;
+            &:hover,
+            &:active {
+                color: var(--cobalt_blue);
+            }
+        }
+    }
+}
+
+
+.order-item__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 16px;
+}
+
+
+
+.order-item__body {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 24px;
+
+    border-radius: 4px;
+
+    transition: .25s ease-out;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        background-color: var(--lightest_pink);
+    }
+}
+
+.order-item__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.order-item__sub-title {
+    display: none;
+}
+
+.order-item__name {
+    .text-18-dark;
+    font-weight: 300;
+}
+
+.order-item__num {
+    .text-18-dark;
+    font-weight: 400;
+    align-self: flex-end;
+}
+
+.order-item__del-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+        .text-14-grey;
+        flex-shrink: 0;
+        transition: .25s ease-out;
+    }
+
+    svg {
+        fill: var(--brownish_grey);
+        transition: .25s ease-out;
+
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+    }
+
+
+    &:hover,
+    &:active {
+        span {
+            color: var(--cobalt_blue);
+        }
+        svg {
+            fill: var(--cobalt_blue);
+        }
+    }
+}
+
+
+
+//  колонки
+
+.order-item-heading,
+.order-item__body {
+    justify-content: space-between;
+}
+
+[order-col='room']{
+    width: 100%;
+    max-width: 420px;
+    text-align: left;
+}
+
+[order-col='sqr']{
+    width: 70px;
+    text-align: right;
+    flex-shrink: 0;
+}
+[order-col='price']{
+    width: 100px;
+    text-align: right;
+    flex-shrink: 0;
+}
+[order-col='price_m']{
+    width: 150px;
+    text-align: right;
+    flex-shrink: 0;
+
+    margin: 0 16px;
+}
+
+[order-col='del']{
+    width: 75px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+
+
+@media only screen and (max-width: 1366px){
+
+
+    .order-item-heading {
+        padding-right: 8px; 
+    }
+
+    .order-item__body {
+        padding-right: 8px;
+    }
+
+
+
+    .search-result__bc {
+
+
+        &-name {
+            font-size: 22px;
+        }
+        &-class {
+            font-size: 14px;
+        }
+        &-address {
+            font-size: 12px;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .order-item__name {
+        font-size: 14px;
+        line-height: 1.43;
+    }
+
+    .order-item__num {
+        font-size: 16px;
+        line-height: 1.44;
+    }
+
+    .order-item__del-btn span {
+        font-size: 12px;
+    }
+
+    .order-item__del-btn svg {
+        margin-right: 4px;
+    }
+
+
+    .order-item-heading__title {
+        font-size: 12px;
+        line-height: 1.17;
+        &[order-col='del'] {
+            text-align: center;
+        }
+    }
+
+    [order-col='del'] {
+        justify-content: flex-end;
+        width: 60px;
+    }
+
+    [order-col='sqr'] {
+        width: 60px; 
+    }
+
+    [order-col='price'] {
+        width: 85px;
+    }
+
+    [order-col='price_m'] {
+        margin: 0 8px;
+        width: 130px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 640px){
+
+    .order-item__bc {
+        align-self: flex-start;
+    }
+
+    .order-item__list {
+        margin-bottom: 0;
+    }
+
+
+    .search-result__bc {
+        margin-bottom: 24px;
+    }
+
+    .order-item-heading {
+        display: none;
+    }
+
+    .order-item__body {
+        padding: 16px 0;
+        border-radius: 0;
+
+        &:first-child{
+            border-top: 2px solid var(--lighter_pink);
+        }
+
+        &:not(:last-child){
+            border-bottom: 2px solid var(--lighter_pink);
+        }
+
+        flex-direction: column;
+        position: relative;
+    }
+
+
+    .order-item__sub-title {
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.4;
+        text-align: left;
+        color: var(--brownish_grey);
+    }
+
+    [order-col='room'],
+    [order-col='sqr'],
+    [order-col='price'],
+    [order-col='price_m'] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .order-item__col {
+        &:not(:last-of-type){
+            margin-bottom: 16px;
+        }
+    }
+
+    .order-item__num {
+        align-self: flex-start;
+    }
+
+
+    .order-item__del-btn {
+        position: absolute;
+
+        right: 0;
+        top: calc(50% - 10px);
+    }
+}

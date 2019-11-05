@@ -20,6 +20,7 @@
 
 
     &__list {
+        width: 100%; // чтоб можно было маргить авто
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
@@ -41,6 +42,50 @@
         &:hover,
         &._current {
             color: var(--cobalt_blue);
+        }
+
+        &._last {
+            margin-left: auto;
+            text-decoration: underline;
+        }
+
+
+        span {
+            color: var(--cobalt_blue);
+        }
+    }
+
+
+    &__btn-clear {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.56;
+        text-align: left;
+        color: var(--brownish_grey);
+
+        padding-left: 16px;
+        margin-left: auto;
+        transition: .25s ease-out;
+        position: relative;
+        &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-image: url('../img/svg/x_mark.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            position: absolute;
+            left: 0;
+            top: 9px;
+        }
+
+
+        &:hover,
+        &:active {
+            color: var(--bright_red);
         }
     }
 }

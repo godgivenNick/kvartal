@@ -7,16 +7,13 @@
     padding-top: 18px;
     margin-bottom: 80px;
 
+
     h1 {
         .page-title;
         margin-bottom: 250px;
         max-width: 882px;
     }
-
-
-    &__title {
-    }
-
+    
 
     &__sort {
         margin-bottom: 110px;
@@ -34,9 +31,9 @@
     &__header {
         width: 100%;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
 
-        margin-bottom: 48px;
+        margin-bottom: 32px;
     }
 
 
@@ -51,22 +48,87 @@
 }
 
 
+.search-result__bc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    &-row {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+
+        margin-bottom: 8px;
+    }
+
+
+    &-name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.43;
+        text-align: left;
+        color: var(--dark);
+
+        margin-right: 8px;
+    }
+
+
+    &-class {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 2;
+        text-align: left;
+        color: var(--brownish_grey);
+    }
+
+
+    &-address {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        text-align: left;
+        color: var(--dark);
+    }
+}
+
+
 
 
 @media only screen and (max-width: 1366px){
 
+    .search h1 {
+        font-size: 35px;
+        margin-bottom: 140px;
+    }
+
+
+    .search-result__bc {
+
+
+        &-name {
+            font-size: 22px;
+        }
+        &-class {
+            font-size: 14px;
+        }
+        &-address {
+            font-size: 12px;
+        }
+    }
+
+
 }
 
-@media only screen and (max-width: 1280px){
-
-}
 
 
 @media only screen and (max-width: 1024px){
 
     .search h1 {
-        margin-bottom: 120px;
-        font-size: 35px;
+        margin-bottom: 110px;
     }
 
     .search-result__header {
@@ -86,10 +148,19 @@
         margin-bottom: 64px;
     }
 
+    
+    .search h1 {
+        margin-bottom: 80px;
+    }
 }
 
 
 @media only screen and (max-width: 640px){
+
+    
+    .search h1 {
+        margin-bottom: 64px;
+    }
 
     .search-result__header {
         flex-direction: column;
@@ -98,6 +169,11 @@
 
     .search-result__title {
         order: 1;
+    }
+
+    .search-result__bc {
+        order: 1;
+        align-self: flex-start;
     }
 
     .search-result__output-ctrls {

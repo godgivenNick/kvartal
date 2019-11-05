@@ -1,6 +1,10 @@
 .search-result
     .search-result__header
-        .search-result__title.text-title Офисы с ремонтом
+        .search-result__bc
+            .search-result__bc-row
+                h4.search-result__bc-name Бизнес-центр «К-1»
+                span.search-result__bc-class Класс В+
+            p.search-result__bc-address Ново-Рыбинская 19/21, Московский р-н
 
         .search-result__output-ctrls.output-ctrls
             <!-- Для текущего варианта выгрузки карточек добавляем класс '._current' для тега с классом '.search-result__ctrl'. -->
@@ -84,10 +88,19 @@
                 a(href="javascript:void(0)").list-card__add-to-order + Добавить к заявке
 
 
+<!-- Форма "добавить избранные помещения к заявке -->
+include ../../components/form_room.pug
++form_bc
+
+
 
 .search-result
     .search-result__header
-        .search-result__title.text-title Складские
+        .search-result__bc
+            .search-result__bc-row
+                h4.search-result__bc-name Бизнес-центр «К-2»
+                span.search-result__bc-class Класс В+
+            p.search-result__bc-address Ново-Рыбинская 19/21, Московский р-н
     
     .search-result-list
         .search-result-list__head
@@ -127,9 +140,19 @@
                 a(href="javascript:void(0)").list-card__add-to-order + Добавить к заявке
 
 
+<!-- Форма "добавить избранные помещения к заявке -->
+include ../../components/form_room.pug
++form_bc
+
+
+
 .search-result
     .search-result__header
-        .search-result__title.text-title Торговые
+        .search-result__bc
+            .search-result__bc-row
+                h4.search-result__bc-name Бизнес-центр «К-3»
+                span.search-result__bc-class Класс В+
+            p.search-result__bc-address Ново-Рыбинская 19/21, Московский р-н
 
     
     .search-result-list
@@ -198,3 +221,8 @@
                     span.list-card__price-sqr 350 ₽/м²
 
                 a(href="javascript:void(0)").list-card__add-to-order + Добавить к заявке
+
+
+<!-- Форма "добавить избранные помещения к заявке -->
+include ../../components/form_room.pug
++form_bc
