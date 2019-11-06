@@ -1,7 +1,13 @@
 .chbox {
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     input {
         display: none;
@@ -29,6 +35,8 @@
         border: solid 2px var(--light_pink);
         background-color: var(--lightest_pink);
 
+        -webkit-transition: .2s ease-out;
+
         transition: .2s ease-out;
 
         position: relative;
@@ -49,6 +57,7 @@
             top: 4px;
 
             opacity: 0;
+            -webkit-transition: .2s ease-out;
             transition: .2s ease-out;
         }
 

@@ -1,8 +1,15 @@
 .side-menu {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
 
     &__back-btn {
@@ -14,6 +21,8 @@
         color: var(--brownish_grey);
 
         margin-bottom: 24px;
+
+        -webkit-transition: .2s ease-out;
 
         transition: .2s ease-out;
         &:hover {
@@ -32,9 +41,15 @@
 
 .side-menu__footer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     position: fixed;
     bottom: 0;
@@ -54,8 +69,12 @@
 
 
     &-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
 
@@ -70,12 +89,21 @@
             margin-left: 10px;
         }
      
+        display: -webkit-box;
+     
+        display: -ms-flexbox;
+     
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
      
         svg {
             fill: var(--brownish_grey);
+            -webkit-transition: .2s ease-out;
             transition: .2s ease-out;
         }
      
@@ -113,15 +141,27 @@
 .side-nav {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     
     &__item {
         width: 100%;
         margin-bottom: 24px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
 
         a {
@@ -136,12 +176,16 @@
             text-align: left;
             color: var(--brownish_grey);
 
+            -webkit-transition: .2s ease-out;
+
             transition: .2s ease-out;
 
             svg {
                 fill: var(--brownish_grey);
                 width: 14px;
                 height: 14px;
+
+                -webkit-transition: .2s ease-out;
 
                 transition: .2s ease-out;
                 margin-right: 8px;
@@ -253,8 +297,13 @@
 
   .side-menu__footer {
       max-width: calc(251px - 24px);
-      flex-direction: column;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
   }
 
   .side-menu__footer-mail {
@@ -270,7 +319,10 @@
     .side-menu__footer {
         max-width: 100%;
         position: static;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         margin-top: auto;
         padding-bottom: 0;
     }
@@ -295,6 +347,7 @@
 
         top: calc(100vh + 88px);
         pointer-events: none;
+        -webkit-transition: .3s ease-out;
         transition: .3s ease-out;
 
         &._show {
@@ -317,6 +370,8 @@
     }
 
     .side-menu__tel-mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
 
         font-family: 'Roboto', sans-serif;

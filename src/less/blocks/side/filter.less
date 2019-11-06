@@ -1,17 +1,30 @@
 .filter {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     margin-bottom: 40px;
 
 
     &__header {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
 
         margin-bottom: 8px;
     }
@@ -36,7 +49,10 @@
         color: var(--royal_blue);
 
         text-decoration: underline;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+
+        -webkit-transition: .2s ease-out;
 
         transition: .2s ease-out;
         cursor: pointer;
@@ -53,8 +69,13 @@
 
 .filter-main {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
 
     &__dd {
@@ -81,7 +102,10 @@
     color: var(--brownish_grey);
 
     text-decoration: underline;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+
+    -webkit-transition: .25s ease-out;
 
     transition: .25s ease-out;
     cursor: pointer;
@@ -96,7 +120,12 @@
 //  Filter Sub
 .filter-sub {
     width: 100%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    -webkit-transition: .25s ease-out;
 
     transition: .25s ease-out;
 
@@ -104,6 +133,8 @@
 
     display: none;
     &._show {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }
@@ -112,8 +143,12 @@
 //  Этажи
 .filter-sub-floors {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     padding: 16px 15px 8px 15px;
     border-bottom: 1px solid var(--lighter_pink);
@@ -127,16 +162,23 @@
         text-align: left;
         color: var(--dark);
 
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+
+            flex-shrink: 0;
         margin-right: 16px;
     }
 
 
     &__list {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 
 
@@ -153,16 +195,29 @@
 //  Switches
 .filter-sub__switches {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .filter-sub__switch {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     padding: 8px 15px;
     &:not(:last-child){
@@ -212,8 +267,12 @@
 
     .filter__hide-btn {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
 
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
@@ -239,9 +298,12 @@
             border: 1px solid var(--royal_blue);
             border-left: 0;
             border-top: 0;
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
         
             margin-top: -8px;
+            
+            -webkit-transition: .2s ease-out;
             
             transition: .2s ease-out;
         }
@@ -251,7 +313,8 @@
 
             &::after {
                 top: 28px;
-                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+                        transform: rotate(-135deg);
             }
         }
     }
@@ -261,6 +324,8 @@
         padding: 24px 16px;
         border-bottom: 1px solid var(--lighter_pink);
 
+        -webkit-transition: .3s ease-out;
+
         transition: .3s ease-out;
         overflow: hidden;
     }
@@ -268,9 +333,15 @@
 
     .filter-main {
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
 
@@ -285,15 +356,23 @@
 
 
     .filter-sub {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 
 
     .filter-sub-floors {
         width: 100%;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         padding: 16px 0px 16px 0;
         border-bottom: none;
@@ -306,9 +385,15 @@
 
 
     .filter-sub__switches {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 
     .filter-sub__switch {
@@ -330,7 +415,8 @@
 
     .filter__submit {
         max-width: 355px;
-        align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
         margin-bottom: 0;
     }
 
@@ -365,8 +451,13 @@
 
 
     .filter-sub-floors {
-        flex-direction: column;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
     .filter-sub-floors__title {

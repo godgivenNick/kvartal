@@ -7,11 +7,21 @@
     width: 100%;
     border-radius: 4px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     font-family: 'Roboto', sans-serif;
+
+    -webkit-transition: .25s ease-out;
 
     transition: .25s ease-out;
     cursor: pointer;

@@ -1,8 +1,15 @@
 .home-info {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     margin-bottom: 170px; // + 30 от текста
 
@@ -19,9 +26,16 @@
 .home-info-bullets {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     margin-bottom: 110px;
 
@@ -29,9 +43,18 @@
     &__item {
         width: calc(100% / 3 - 20px);
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
 
         margin-bottom: 48px;
 
@@ -54,8 +77,15 @@
     width: 100%;
     max-width: 882px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 
@@ -66,6 +96,7 @@
     }
 
     a {
+        -webkit-transition: .2s ease-out;
         transition: .2s ease-out;
         &:hover {
             text-decoration: underline;

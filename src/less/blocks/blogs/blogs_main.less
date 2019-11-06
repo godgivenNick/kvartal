@@ -1,0 +1,209 @@
+.blogs-main {
+    width: 100%;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    margin-bottom: 280px;
+}
+
+
+
+.blogs-main-item {
+    width: calc(100% / 3 - 16px);
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    cursor: pointer;
+
+    margin-bottom: 110px;
+
+    &:nth-child(3n+2){
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+
+    &__title {
+        .text-title;
+        // color: var(--cobalt_blue);
+        color: var(--dark);
+        -webkit-transition: .25s ease-out;
+        transition: .25s ease-out;
+
+        margin-bottom: 16px;
+    }
+
+
+    &__info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        margin-bottom: 24px;
+
+        &-date,
+        &-views,
+        &-likes {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            text-align: left;
+            color: var(--brownish_grey);
+
+            margin-right: 16px;
+        }
+
+        &-views {
+            position: relative;
+            padding-left: 22px;
+            &::before {
+                content: url('../img/svg/eye_grey.svg');
+                width: 16px;
+                height: 14px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        &-likes {
+            text-transform: uppercase;
+
+            position: relative;
+            padding-left: 20px;
+            &::before {
+                content: url('../img/svg/like_grey.svg');
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+
+    &__desc {
+        .text-18-dark;
+        margin-bottom: 56px;
+    }
+
+
+    &__btn {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.56;
+        text-align: left;
+        color: var(--dark);
+
+        -ms-flex-item-align: start;
+
+            align-self: flex-start;
+        border-bottom: 2px solid var(--lighter_pink);
+        -webkit-transition: .25s ease-out;
+        transition: .25s ease-out;
+        margin-top: auto;
+
+        &:hover,
+        &:active {
+            color: var(--cobalt_blue);
+            border-color: var(--cobalt_blue);
+        }
+    }
+
+
+    &:hover,
+    &:active {
+
+        .blogs-main-item__title {
+            color: var(--cobalt_blue);
+        }
+
+        .blogs-main-item__btn {
+            color: var(--cobalt_blue);
+            border-color: var(--cobalt_blue);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1366px){
+	.blogs-main {
+        margin-bottom: 140px;
+    }
+}
+
+
+@media only screen and (max-width: 1280px){
+	.blogs-main-item {
+        width: calc(50% - 12px);
+
+        margin-bottom: 80px;
+
+        &:nth-child(3n+2){
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        &:nth-child(odd){
+            margin-right: 24px;
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+
+	.blogs-main {
+        margin-bottom: 110px;
+    }
+
+    .blogs-main-item__title {
+        font-size: 22px;
+    }
+
+    .blogs-main-item__info {
+        margin-bottom: 16px;
+    }
+
+    .blogs-main-item__desc {
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+
+}
+
+
+@media only screen and (max-width: 640px){
+	.blogs-main-item {
+        width: 100%;
+        margin-bottom: 64px;
+
+        &:nth-child(odd){
+            margin-right: 0px;
+        }
+    }
+}

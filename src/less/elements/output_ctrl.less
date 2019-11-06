@@ -1,19 +1,27 @@
 .output-ctrls {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
 .output-ctrl {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     margin-left: 40px;
     cursor: pointer;
 
     & > * {
         // pointer-events: none;
-        transition: .2s ease-out;
+        -webkit-transition: .2s ease-out;transition: .2s ease-out;
     }
 
 

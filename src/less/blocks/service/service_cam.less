@@ -2,8 +2,13 @@
     width: 100%;
 
     padding-top: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     h1 {
         .page-title;
@@ -17,8 +22,15 @@
 .service-cam {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     margin-bottom: 180px;
 
@@ -30,14 +42,23 @@
 
 
     &__col {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
     &__ctrls {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
 
         margin-bottom: 8px;
     }
@@ -46,9 +67,15 @@
     &__ctrl {
         padding: 0 16px;
         height: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
@@ -63,6 +90,8 @@
         border-radius: 4px;
         border: solid 1px var(--brownish_grey);
         color: var(--brownish_grey);  
+    
+        -webkit-transition: .25s ease-out;  
     
         transition: .25s ease-out;
     
@@ -80,6 +109,10 @@
 .service-cam__container {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
 }
 
@@ -88,12 +121,21 @@
     width: 100%;
     max-width: 882px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
 
     display: none;
     &._show {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }
@@ -114,9 +156,17 @@
     border-radius: 10px;
     background-color: var(--royal_blue);
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     font-family: 'Roboto', sans-serif;
     font-size: 54px;
@@ -194,7 +244,8 @@
     }
 
     .service-cam__ctrls {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 }
 

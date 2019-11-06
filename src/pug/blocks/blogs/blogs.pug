@@ -1,0 +1,40 @@
+section.blogs
+    h1.blogs__title.page-title Новости и полезная информация для арендаторов
+
+    .blogs__sort.sort
+        span.sort__title Тематики:
+        .sort__list
+            <!-- Для выбранного варианта сортировки добавляем к кнопке '.sort__btn' класс '._current' -->
+            a(href="javascript:void(0)").sort__btn._current Полезное для арендаторов
+            a(href="javascript:void(0)").sort__btn Бизнес-центры
+            a(href="javascript:void(0)").sort__btn Офисы
+            a(href="javascript:void(0)").sort__btn Склады
+            a(href="javascript:void(0)").sort__btn Склады-холодильники
+            a(href="javascript:void(0)").sort__btn Торговля
+            a(href="javascript:void(0)").sort__btn Производство
+            a(href="javascript:void(0)").sort__btn Новости о нас
+            a(href="javascript:void(0)").sort__btn FAQ
+
+
+<!-- Вывод статей блога -->
+include blogs_main.pug
+
+
+<!-- Вывод FAQ -->
+include blogs_faq.pug
+
+
+<!-- Слайдер с помещениями -->
+include ../../components/cards_list.pug
+
+
+<!-- Прямая аренда на выгоднях условиях -->
+include ../../components/rent.pug
+
+
+<!-- Синяя проклятая форма -->
+include ../../components/form_gg.pug
+
+
+
+

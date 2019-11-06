@@ -1,9 +1,17 @@
 .header {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     padding: 0 60px;
     height: 88px;
@@ -25,25 +33,38 @@
         text-align: left;
         color: #f9f9f9;
 
+        -webkit-transition: .2s ease-out;
+
         transition: .2s ease-out;
         text-decoration: underline;
-        text-decoration-color: transparent;
+        -webkit-text-decoration-color: transparent;
+                text-decoration-color: transparent;
         &:hover {
-            text-decoration-color: inherit;
+            -webkit-text-decoration-color: inherit;
+                    text-decoration-color: inherit;
         }   
     }
 }
 
 
 .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
     cursor: pointer;
 
     &__col {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     &__name {
@@ -129,17 +150,20 @@
   
             content: '';
             background-color: #f9f9f9;
+            -webkit-transition: .25s ease-out;
             transition: .25s ease-out;
 
         }
   
         &::before {
             top: -12px;
-            transform-origin: top right;
+            -webkit-transform-origin: top right;
+                    transform-origin: top right;
         }
         &::after {
             top: 12px;
-            transform-origin: bottom right;
+            -webkit-transform-origin: bottom right;
+                    transform-origin: bottom right;
         }
     }
 
@@ -150,10 +174,12 @@
             background-color: transparent;
 
             &::before {
-                transform: rotate(-43deg);
+                -webkit-transform: rotate(-43deg);
+                        transform: rotate(-43deg);
             }
             &::after {
-                transform: rotate(43deg);
+                -webkit-transform: rotate(43deg);
+                        transform: rotate(43deg);
             }
         }
     }
@@ -183,6 +209,8 @@
 @media only screen and (max-width: 768px) {
 
     .burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 

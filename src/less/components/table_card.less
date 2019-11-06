@@ -1,7 +1,12 @@
 //  Карточка
 .table-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     width: calc(100% / 3 - 20px);
     margin-bottom: 30px;
@@ -30,10 +35,19 @@
 
     &__content {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
-        align-items: flex-start;
+        -webkit-box-align: start;
+
+            -ms-flex-align: start;
+
+                align-items: flex-start;
 
         padding-top: 16px;
         padding-left: 24px;
@@ -52,14 +66,18 @@
 
         margin-bottom: 8px;
 
+        -webkit-transition: .2s ease-out;
+
         transition: .2s ease-out;
         text-decoration: underline;
-        text-decoration-color: transparent;
+        -webkit-text-decoration-color: transparent;
+                text-decoration-color: transparent;
 
         &:hover,
         &:active {
             color: var(--cobalt_blue);
-            text-decoration-color: var(--cobalt_blue);
+            -webkit-text-decoration-color: var(--cobalt_blue);
+                    text-decoration-color: var(--cobalt_blue);
             border-color: var(--cobalt_blue);
         }
     }
@@ -79,8 +97,12 @@
 
     &__row {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
 
@@ -88,8 +110,15 @@
         width: 100%;
         max-width: 140px;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         margin-bottom: 16px;
     }
@@ -106,15 +135,25 @@
 
 
     &__address {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         margin-bottom: 8px;
     }
 
     &__metro {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
@@ -127,9 +166,13 @@
         color: var(--dark);
         border-bottom: 2px solid var(--light_pink);
 
-        align-self: center;
+        -ms-flex-item-align: center;
+
+            align-self: center;
         margin-top: auto;
         margin-bottom: 40px;
+
+        -webkit-transition: .2s ease-out;
 
         transition: .2s ease-out;
 
@@ -164,7 +207,8 @@
 
 //  Фотки
 .table-card__slider {
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     width: calc(100% - 16px);
     // height: 240px;
 
@@ -173,9 +217,15 @@
     position: relative;
 
     .swiper-pagination {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .swiper-pagination-bullet {
@@ -200,9 +250,14 @@
 //  Плиточная раскладка
 .search-result-table {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
 }
 
 

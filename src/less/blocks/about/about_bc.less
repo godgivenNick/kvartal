@@ -1,7 +1,12 @@
 .about-bc {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
 
     &__title {
@@ -12,8 +17,13 @@
 
     &__list {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
 
@@ -22,19 +32,31 @@
 .about-bc-item {
 
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
     margin-bottom: 200px;
 
     &__content {
         width: 456px;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
     
         padding-right: 30px;
     
+        display: -webkit-box;
+    
+        display: -ms-flexbox;
+    
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
@@ -73,8 +95,11 @@
 
 
     &__metro {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 
         margin-bottom: 8px;
     }
@@ -111,6 +136,8 @@
 
         margin-bottom: 40px;
 
+        -webkit-transition: .2s ease-out;
+
         transition: .2s ease-out;
         &:hover {
             color: var(--royal_blue);
@@ -138,9 +165,12 @@
         text-align: left;
         color: var(--dark);
 
-        align-self: flex-start;
+        -ms-flex-item-align: start;
+
+            align-self: flex-start;
 
         border-bottom: 1px solid var(--dark);
+        -webkit-transition: .2s ease-out;
         transition: .2s ease-out;
         &:hover {
             border-color: transparent;
@@ -155,9 +185,17 @@
     border-radius: 10px;
     overflow: hidden;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     img {
         width: 100%;
@@ -173,7 +211,10 @@
     }
 
     .about-bc-item {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
 
         &__content {

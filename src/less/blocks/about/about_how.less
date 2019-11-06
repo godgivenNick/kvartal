@@ -1,8 +1,13 @@
 //  Преимущества
 .about-benefits {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     margin-bottom: 120px;
 
@@ -14,14 +19,23 @@
 
     &__list {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
 
     &__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         margin-bottom: 80px;
 
@@ -43,8 +57,13 @@
 //  Аренда
 .about-how {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     margin-bottom: 120px;
 
@@ -56,14 +75,23 @@
 
     &__list {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
 
     &__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         margin-bottom: 80px;
 
@@ -91,6 +119,7 @@
 
         &-tel {
             color: var(--dark);
+            -webkit-transition: .2s ease-out;
             transition: .2s ease-out;
             &:hover {
                 color: var(--royal_blue);
@@ -101,6 +130,7 @@
         &-btn {
             color: var(--dark);
             border-bottom: 2px dotted var(--brownish_grey);
+            -webkit-transition: .2s ease-out;
             transition: .2s ease-out;
             &:hover {
                 color: var(--royal_blue);
@@ -122,11 +152,17 @@
     }
 
     .about-how__list {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .about-benefits__list {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .about-how__item {

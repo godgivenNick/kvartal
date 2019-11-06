@@ -6,8 +6,15 @@
     background-color: var(--white);
     border-right: 1px solid var(--lighter_pink);
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     position: fixed;
     left: 0;
@@ -16,8 +23,15 @@
     &__container {
         width: 100%;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         padding-top: calc(28px + 88px); // 88 - шапка
         padding-left: 64px;

@@ -3,12 +3,16 @@
 }
 
 .double-input {
-
     width: 100%;
-    // max-width: 393px;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
 
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     height: 50px;
 
@@ -54,6 +58,18 @@
         text-align: center;
         color: var(--cobalt_blue);
 
+        &::-webkit-input-placeholder {
+            color: var(--brownish_grey);
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--brownish_grey);
+        }
+
+        &::-ms-input-placeholder {
+            color: var(--brownish_grey);
+        }
+
         &::placeholder {
             color: var(--brownish_grey);
         }
@@ -71,11 +87,14 @@
     &__from ~ span {
         width: 1px;
         height: calc(50px - 16px);
-        align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
 
         background-color: var(--light_pink);
 
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+
+            flex-shrink: 0;
         margin: 0 16px;
     }
 
@@ -87,8 +106,12 @@
 /*   Дропдаун   */
 
 .double-input-dd {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     position: relative;
 
@@ -106,6 +129,8 @@
     }
 
     .select2-container .select2-selection--single .select2-selection__rendered {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         font-family: 'Roboto', sans-serif;
         font-size: 14px;

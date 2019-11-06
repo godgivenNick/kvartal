@@ -8,8 +8,14 @@
 .dd {
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     position: relative;
 
@@ -27,6 +33,8 @@
         z-index: 1;
         pointer-events: none;
 
+        -webkit-transition: .2s ease-out;
+
         transition: .2s ease-out;
 
         &._focus {
@@ -43,6 +51,8 @@
     &._selected {
 
         .select2-container .select2-selection--single .select2-selection__rendered {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             padding-left: 15px;
             padding-right: 0px;
@@ -85,7 +95,9 @@
 
     position: relative;
 
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
     &::before {
         content: '';
@@ -97,7 +109,9 @@
         right: 17px;
         top: -7px;
         
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        
+                transform: rotate(45deg);
 
         border: 1px solid var(--light_pink);
         background: white;
@@ -112,6 +126,8 @@
     font-size: 14px;
     background-color: var(--white);
     color: var(--dark);
+
+    -webkit-transition: .2s ease-out;
 
     transition: .2s ease-out;
     padding: 10px 5px 10px 15px;
@@ -143,8 +159,14 @@
     border: 1px solid var(--light_pink);
     border-radius: 4px;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+
+    -webkit-transition: .2s ease;
 
     transition: .2s ease;
     &:hover {
@@ -200,9 +222,12 @@
     border: 1px solid #707070;
     border-left: 0;
     border-top: 0;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 
     margin-top: -8px;
+    
+    -webkit-transition: .2s ease-out;
     
     transition: .2s ease-out;
 }
@@ -215,7 +240,8 @@
     border: 1px solid var(--cobalt_blue);
     border-left: 0;
     border-top: 0;
-    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
 
     margin-top: -3px;
 }
@@ -244,8 +270,12 @@
 
 .dd-row {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     .dd {
 

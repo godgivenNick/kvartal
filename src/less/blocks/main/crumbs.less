@@ -1,9 +1,17 @@
 .crumbs {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 
 	&__item {
 
@@ -38,6 +46,8 @@
 			line-height: 1.75;
 			text-align: left;
 			color: var(--brownish_grey);
+
+			-webkit-transition: .2s ease-out;
 
 			transition: .2s ease-out;
 			cursor: pointer;

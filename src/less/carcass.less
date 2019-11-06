@@ -53,8 +53,13 @@ button {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
   min-height: 100vh;
   width: 100%;
@@ -70,9 +75,18 @@ section {
 .gui {
 	width: 100%;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 
 	padding: 80px 100px;
 
@@ -80,9 +94,18 @@ section {
 		width: 100%;
 		padding: 20px 40px;
 
+		display: -webkit-box;
+
+		display: -ms-flexbox;
+
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
 
 		border: 1px solid grey;
 		margin-bottom: 40px;
@@ -91,9 +114,18 @@ section {
 	&__item {
 		width: 100%;
 
+		display: -webkit-box;
+
+		display: -ms-flexbox;
+
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
 
 		border-bottom: 1px solid lightgrey;
 		padding-bottom: 20px;
@@ -132,20 +164,6 @@ section {
 @media only screen and (max-width: 1024px){
 	.gogi { width: 100%; }
 }
-
-
-// @media only screen and (min-width : 768px) and (max-width : 1024px) {
-// 	.gogi { width: 100%; }
-// }
-
-// @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
-// 	.gogi { width: 100%; }
-// }
-
-// @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
-// 	.gogi { width: 100%; }
-// }
-
 
 @media only screen and (max-width: 768px){
 	.gogi { width: 100%; }
