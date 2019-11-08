@@ -145,10 +145,17 @@ section.object-main
 
             <!-- План помещения + галерея изображений. На мобилке это безобразие будет преображено в обычный слайдер. [1] Аттрибут 'room-id' - для управления отображением галереи конкретного помещения; [2] Аттрибут 'object' - для генерации навигационных иконок слева для плана помещения и каждой фотки -->
             .object-main-plan
-                .object-main-plan__next
-                .object-main-plan__prev
+                .object-main-plan__ctrls
+                    .object-main-plan__prev
+                        <svg>
+                            <use xlink:href="#arrow_left"></use>
+                        </svg>
+                    .object-main-plan__next
+                        <svg>
+                            <use xlink:href="#arrow_right"></use>
+                        </svg>
                 .swiper-wrapper(room-id='1')._show
-                    .object-main-plan__plan(object='plan' room-img-id='')
+                    .object-main-plan__plan(object='plan' room-img-id='').swiper-slide
                     img(src="./img/bc/bc_2_big.jpg", alt="" object='img').object-main-plan__plan.swiper-slide._show
                     img(src="./img/bc/bc_3_big.jpg", alt="" object='img').object-main-plan__plan.swiper-slide
                     img(src="./img/bc/bc_2_big.jpg", alt="" object='img').object-main-plan__plan.swiper-slide

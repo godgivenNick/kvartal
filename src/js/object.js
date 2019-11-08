@@ -49,6 +49,27 @@ if(document.querySelector('.object-main')){
 
 
 
+
+    //  Слайдер с планировкой и галереей
+    var object_galery_slider = new Swiper('.object-main-plan', {
+
+        init: false,
+        slidesPerView: 1,
+        speed: 600,
+        spaceBetween: 24,
+    
+        watchOverflow: true,
+        allowTouchMove: false,
+    
+        navigation: {
+            nextEl: '.object-main-plan__next',
+            prevEl: '.object-main-plan__prev',
+        },
+    
+    });
+
+
+
     //  Жрет разметка контейнера с кнопками Этажей и генерит аналог перед датой обновления помещения
     function create_floors(){
 
@@ -67,7 +88,19 @@ if(document.querySelector('.object-main')){
 
     if(client_width <= 640) {
         create_floors();
+
+        //  Нужно еще сожрать всю разметку правого блока ( планировка / слайдер / форма ) и запихнуть ее после инфы о помещении
+
+
+
+        //  инициализация слайдера, когда вся разметка подготовлена
+        object_galery_slider.init();
+
+
     }
+
+
+
 
 
 
